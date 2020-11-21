@@ -10,10 +10,9 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 app.get("/", (req, res)=>{
     res.json(buildings)
 });
-
 //getBuildingById
 app.get("/getBuildingById/:id", (req,res) =>{
-    const found = buildings.find (building => building.id === parseInt(req.params.id));
+    const found = buildings.filter (building => building.id === parseInt(req.params.id));
     
     if (found){
         res.json(found)
@@ -23,7 +22,7 @@ app.get("/getBuildingById/:id", (req,res) =>{
 });
 //getBuildingByAddress
 app.get("/getBuildingByAddress/:address", (req,res) =>{
-    const found = buildings.find (building => building.address === String (req.params.address));
+    const found = buildings.filter (building => building.address === String (req.params.address));
 
     if (found){
         res.json(found);
@@ -34,17 +33,17 @@ app.get("/getBuildingByAddress/:address", (req,res) =>{
 //getBuildingByBoilersId
 app.get("/getBuildingByBoilersId/:boilersId", (req,res) =>{
     const boilersIdNumber = parseInt (req.params.boilersId);
-    const found = buildings.some (building => building.boilersId.includes(boilersIdNumber));
+    const found = buildings.filter(building => building.boilersId.includes(boilersIdNumber));
     
     if (found){
-        res.json(buildings.filter(building => building.boilersId.includes(boilersIdNumber )));
+        res.json(found);
     } else {
         res.status(400).json({ msg: `No building with the boiler ID of ${req.params.boilersId}`})
     }
 });
 //getBuildingByFullName
 app.get("/getBuildingByFullName/:fullName", (req,res) =>{
-    const found = buildings.find (building => building.fullName === String (req.params.fullName));
+    const found = buildings.filter (building => building.fullName === String (req.params.fullName));
 
     if (found){
         res.json(found);
@@ -54,7 +53,7 @@ app.get("/getBuildingByFullName/:fullName", (req,res) =>{
 });
 //getBuildingByPhone
 app.get("/getBuildingByPhone/:phone", (req,res) =>{
-    const found = buildings.find (building => building.phone === String (req.params.phone));
+    const found = buildings.filter (building => building.phone === String (req.params.phone));
 
     if (found){
         res.json(found)
@@ -62,7 +61,6 @@ app.get("/getBuildingByPhone/:phone", (req,res) =>{
         res.status(400).json({ msg: `No building with the phone of ${req.params.phone}`})
     }
 });
-
 //deleteBuildingById
 app.delete ("/:id", (req, res)=>{
     const found = buildings.some(building =>building.id === parseInt(req.params.id))
