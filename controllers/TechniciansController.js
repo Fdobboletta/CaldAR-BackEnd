@@ -21,24 +21,24 @@ app.get("/getTechnicianById/:id", (req,res) =>{
     }
 });
 //getTechnicianByFirstName
-app.get("/getTechnicianByFirstName/:firstName", (req,res) =>{
+app.get("/getTechnicianByFirstName/:first_name", (req,res) =>{
     const found = technicians.filter (technician => technician.first_name === String (req.params.first_name));
 
     if (found){
         res.json(found);
     } else {
-        res.status(400).json({ msg: `No technician with the name of ${req.params.address}`})
+        res.status(400).json({ msg: `No technician with the name of ${req.params.first_name}`})
     }
 });
 //getTechnicianByLastName
-app.get("/getTechnicianByLastName/:lastName", (req,res) =>{
+app.get("/getTechnicianByLastName/:last_name", (req,res) =>{
     
     const found = technicians.filter(technician => technician.last_name === String (req.params.last_name));
     
     if (found){
         res.json(found);
     } else {
-        res.status(400).json({ msg: `No technician with the last name of ${req.params.boilersId}`})
+        res.status(400).json({ msg: `No technician with the last name of ${req.params.last_name}`})
     }
 });
 //getTechnicianByEmail
@@ -48,14 +48,14 @@ app.get("/gettechnicianByEmail/:email", (req,res) =>{
     if (found){
         res.json(found);
     } else {
-        res.status(400).json({ msg: `No technician with the email of ${req.params.fullName}`})
+        res.status(400).json({ msg: `No technician with the email of ${req.params.email}`})
     }
 });
 
 //getTechnicianBySkillsId
 app.get("/getTechnicianBySkillsId/:skillsId", (req,res) =>{
     const skillsId = parseInt (req.params.skillsId);
-    const found = technicians.filter(technician => technician.boilersId.includes(skillsId));
+    const found = technicians.filter(technician => technician.skillsId.includes(skillsId));
     
     if (found){
         res.json(found);
@@ -64,7 +64,7 @@ app.get("/getTechnicianBySkillsId/:skillsId", (req,res) =>{
     }
 });
 //getTechnicianByHourRate
-app.get("/getTechnicianByHourRate/:hourRate", (req,res) =>{
+app.get("/getTechnicianByHourRate/:hour_rate", (req,res) =>{
     const found = technicians.filter (technician => technician.hour_rate === parseInt (req.params.hour_rate));
 
     if (found){
@@ -81,12 +81,12 @@ app.get("/getTechnicianByDailyCapacity/:dailyCapacity", (req,res) =>{
     if (found){
         res.json(found);
     } else {
-        res.status(400).json({ msg: `No technician with the daily capacity of ${req.params.fullName}`})
+        res.status(400).json({ msg: `No technician with the daily capacity of ${req.params.daily_capacity}`})
     }
 });
 
 
-//deletetechnicianById
+//deleteTechnicianById
 app.delete ("/:id", (req, res)=>{
     const found = technicians.some(technician =>technician.id === parseInt(req.params.id))
     
