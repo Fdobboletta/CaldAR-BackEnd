@@ -31,4 +31,15 @@ app.get("/getBoilerTypeBySkillsId/:skillsId", (req, res) => {
     }
 });
 
+// getBoilerTypesByDescription
+app.get("/getBoilerTypesByDescription/:description", (req, res) =>{
+    const found = boilerTypes.some(boilerTypes => boilerTypes.description === String(req.params.description));
+
+    if (found) {
+        res.json(boilerTypes.filter(boilerTypes => boilerTypes.description === String(req.params.description)))
+    } else {
+        res.status(400).json({ msg: `No boiler type with the description of ${req.params.description}`})
+    }
+});
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
