@@ -1,52 +1,613 @@
 [
-    {"id":1,"skillsId":[16,19,5,17,2,2,5,6],"description":"Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.","stock":1},
-    {"id":2,"skillsId":[4,18],"description":"Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.","stock":20},
-    {"id":3,"skillsId":[12,15,12,18,14,7,12,2,3,18],"description":"Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.","stock":17},
-    {"id":4,"skillsId":[8,15,6,19,4,9,9,15,2],"description":"Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.","stock":20},
-    {"id":5,"skillsId":[15,10,2,14,17],"description":"In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.","stock":8},
-    {"id":6,"skillsId":[17],"description":"Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.","stock":15},
-    {"id":7,"skillsId":[12,20,7,15,11,11,15,20,17],"description":"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.","stock":11},
-    {"id":8,"skillsId":[19,8,19,5,4,6,19,2],"description":"Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.","stock":6},
-    {"id":9,"skillsId":[18,9],"description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.","stock":1},
-    {"id":10,"skillsId":[1,3,13,1,20,7,11,7,19],"description":"Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.","stock":3},
-    {"id":11,"skillsId":[7,3,8],"description":"Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.","stock":20},
-    {"id":12,"skillsId":[12],"description":"Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.","stock":15},
-    {"id":13,"skillsId":[3],"description":"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.","stock":2},
-    {"id":14,"skillsId":[19,12,10,1,17],"description":"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.","stock":19},
-    {"id":15,"skillsId":[3,3,4,2,2,15],"description":"Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.","stock":4},
-    {"id":16,"skillsId":[9,4,2,8,12,9,2,7,17,16],"description":"In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.","stock":11},
-    {"id":17,"skillsId":[10,18,9,18,8,19,19,2,15,9],"description":"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.","stock":5},
-    {"id":18,"skillsId":[12,13,10],"description":"Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.","stock":1},
-    {"id":19,"skillsId":[5,8],"description":"Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.","stock":19},
-    {"id":20,"skillsId":[5,17,12,3,8,11,17,16,20],"description":"Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.","stock":8},
-    {"id":21,"skillsId":[3,15,10,18,12,14,7,16,14],"description":"Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.","stock":12},
-    {"id":22,"skillsId":[7,4,1,10,10,17],"description":"In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.","stock":12},
-    {"id":23,"skillsId":[4,7,19],"description":"In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.","stock":12},
-    {"id":24,"skillsId":[20,2],"description":"Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.","stock":19},
-    {"id":25,"skillsId":[13,2],"description":"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.","stock":6},
-    {"id":26,"skillsId":[12,11,16,16,11],"description":"Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.","stock":20},
-    {"id":27,"skillsId":[5,2,10,3,17],"description":"Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.","stock":19},
-    {"id":28,"skillsId":[3,18,6,17,17,7,14,14],"description":"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.","stock":13},
-    {"id":29,"skillsId":[5,15,8,14,13,18,1,18,4,16],"description":"Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.","stock":11},
-    {"id":30,"skillsId":[19,2,14],"description":"Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.","stock":8},
-    {"id":31,"skillsId":[18,15],"description":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.","stock":12},
-    {"id":32,"skillsId":[1,20,9,10,1,15,20,12],"description":"Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.","stock":15},
-    {"id":33,"skillsId":[6,17,16,2,2,20],"description":"Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.","stock":13},
-    {"id":34,"skillsId":[12,8,14,8,19],"description":"Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.","stock":5},
-    {"id":35,"skillsId":[5,6],"description":"Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.","stock":15},
-    {"id":36,"skillsId":[13,4,6,19],"description":"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.","stock":2},
-    {"id":37,"skillsId":[5,20,13,4],"description":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.","stock":14},
-    {"id":38,"skillsId":[14,17,18,16],"description":"Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.","stock":5},
-    {"id":39,"skillsId":[8,3,9,3,6,16,10,5,18,12],"description":"Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.","stock":11},
-    {"id":40,"skillsId":[1,15,14,1],"description":"Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.","stock":20},
-    {"id":41,"skillsId":[20,1],"description":"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.","stock":6},
-    {"id":42,"skillsId":[8,20,8,13,16],"description":"Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.","stock":19},
-    {"id":43,"skillsId":[11,8,15,7,12,11,1,13],"description":"Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.","stock":9},
-    {"id":44,"skillsId":[10,5,7,13,14],"description":"Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.","stock":9},
-    {"id":45,"skillsId":[10,1],"description":"Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.","stock":18},
-    {"id":46,"skillsId":[18,6,13,5,5,2],"description":"Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.","stock":13},
-    {"id":47,"skillsId":[8,2,4],"description":"Sed ante. Vivamus tortor. Duis mattis egestas metus.","stock":15},
-    {"id":48,"skillsId":[4,9,20,3],"description":"Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.","stock":20},
-    {"id":49,"skillsId":[4,11,14,15,13,13,15,19],"description":"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.","stock":10},
-    {"id":50,"skillsId":[19,10,18],"description":"Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.","stock":12}
+    {
+        "id": 1,
+        "skillsId": [
+            16,
+            19,
+            5,
+            17,
+            2,
+            2,
+            5,
+            6
+        ],
+        "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "stock": 1
+    },
+    {
+        "id": 2,
+        "skillsId": [
+            4,
+            18
+        ],
+        "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+        "stock": 20
+    },
+    {
+        "id": 3,
+        "skillsId": [
+            12,
+            15,
+            12,
+            18,
+            14,
+            7,
+            12,
+            2,
+            3,
+            18
+        ],
+        "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+        "stock": 17
+    },
+    {
+        "id": 4,
+        "skillsId": [
+            8,
+            15,
+            6,
+            19,
+            4,
+            9,
+            9,
+            15,
+            2
+        ],
+        "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+        "stock": 20
+    },
+    {
+        "id": 5,
+        "skillsId": [
+            15,
+            10,
+            2,
+            14,
+            17
+        ],
+        "description": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+        "stock": 8
+    },
+    {
+        "id": 6,
+        "skillsId": [
+            17
+        ],
+        "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+        "stock": 15
+    },
+    {
+        "id": 7,
+        "skillsId": [
+            12,
+            20,
+            7,
+            15,
+            11,
+            11,
+            15,
+            20,
+            17
+        ],
+        "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+        "stock": 11
+    },
+    {
+        "id": 8,
+        "skillsId": [
+            19,
+            8,
+            19,
+            5,
+            4,
+            6,
+            19,
+            2
+        ],
+        "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+        "stock": 6
+    },
+    {
+        "id": 9,
+        "skillsId": [
+            18,
+            9
+        ],
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+        "stock": 1
+    },
+    {
+        "id": 10,
+        "skillsId": [
+            1,
+            3,
+            13,
+            1,
+            20,
+            7,
+            11,
+            7,
+            19
+        ],
+        "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+        "stock": 3
+    },
+    {
+        "id": 11,
+        "skillsId": [
+            7,
+            3,
+            8
+        ],
+        "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+        "stock": 20
+    },
+    {
+        "id": 12,
+        "skillsId": [
+            12
+        ],
+        "description": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+        "stock": 15
+    },
+    {
+        "id": 13,
+        "skillsId": [
+            3
+        ],
+        "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        "stock": 2
+    },
+    {
+        "id": 14,
+        "skillsId": [
+            19,
+            12,
+            10,
+            1,
+            17
+        ],
+        "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+        "stock": 19
+    },
+    {
+        "id": 15,
+        "skillsId": [
+            3,
+            3,
+            4,
+            2,
+            2,
+            15
+        ],
+        "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+        "stock": 4
+    },
+    {
+        "id": 16,
+        "skillsId": [
+            9,
+            4,
+            2,
+            8,
+            12,
+            9,
+            2,
+            7,
+            17,
+            16
+        ],
+        "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+        "stock": 11
+    },
+    {
+        "id": 17,
+        "skillsId": [
+            10,
+            18,
+            9,
+            18,
+            8,
+            19,
+            19,
+            2,
+            15,
+            9
+        ],
+        "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+        "stock": 5
+    },
+    {
+        "id": 18,
+        "skillsId": [
+            12,
+            13,
+            10
+        ],
+        "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+        "stock": 1
+    },
+    {
+        "id": 19,
+        "skillsId": [
+            5,
+            8
+        ],
+        "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
+        "stock": 19
+    },
+    {
+        "id": 20,
+        "skillsId": [
+            5,
+            17,
+            12,
+            3,
+            8,
+            11,
+            17,
+            16,
+            20
+        ],
+        "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+        "stock": 8
+    },
+    {
+        "id": 21,
+        "skillsId": [
+            3,
+            15,
+            10,
+            18,
+            12,
+            14,
+            7,
+            16,
+            14
+        ],
+        "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+        "stock": 12
+    },
+    {
+        "id": 22,
+        "skillsId": [
+            7,
+            4,
+            1,
+            10,
+            10,
+            17
+        ],
+        "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+        "stock": 12
+    },
+    {
+        "id": 23,
+        "skillsId": [
+            4,
+            7,
+            19
+        ],
+        "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+        "stock": 12
+    },
+    {
+        "id": 24,
+        "skillsId": [
+            20,
+            2
+        ],
+        "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
+        "stock": 19
+    },
+    {
+        "id": 25,
+        "skillsId": [
+            13,
+            2
+        ],
+        "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+        "stock": 6
+    },
+    {
+        "id": 26,
+        "skillsId": [
+            12,
+            11,
+            16,
+            16,
+            11
+        ],
+        "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
+        "stock": 20
+    },
+    {
+        "id": 27,
+        "skillsId": [
+            5,
+            2,
+            10,
+            3,
+            17
+        ],
+        "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+        "stock": 19
+    },
+    {
+        "id": 28,
+        "skillsId": [
+            3,
+            18,
+            6,
+            17,
+            17,
+            7,
+            14,
+            14
+        ],
+        "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+        "stock": 13
+    },
+    {
+        "id": 29,
+        "skillsId": [
+            5,
+            15,
+            8,
+            14,
+            13,
+            18,
+            1,
+            18,
+            4,
+            16
+        ],
+        "description": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+        "stock": 11
+    },
+    {
+        "id": 30,
+        "skillsId": [
+            19,
+            2,
+            14
+        ],
+        "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
+        "stock": 8
+    },
+    {
+        "id": 31,
+        "skillsId": [
+            18,
+            15
+        ],
+        "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+        "stock": 12
+    },
+    {
+        "id": 32,
+        "skillsId": [
+            1,
+            20,
+            9,
+            10,
+            1,
+            15,
+            20,
+            12
+        ],
+        "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+        "stock": 15
+    },
+    {
+        "id": 33,
+        "skillsId": [
+            6,
+            17,
+            16,
+            2,
+            2,
+            20
+        ],
+        "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+        "stock": 13
+    },
+    {
+        "id": 34,
+        "skillsId": [
+            12,
+            8,
+            14,
+            8,
+            19
+        ],
+        "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+        "stock": 5
+    },
+    {
+        "id": 35,
+        "skillsId": [
+            5,
+            6
+        ],
+        "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+        "stock": 15
+    },
+    {
+        "id": 36,
+        "skillsId": [
+            13,
+            4,
+            6,
+            19
+        ],
+        "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
+        "stock": 2
+    },
+    {
+        "id": 37,
+        "skillsId": [
+            5,
+            20,
+            13,
+            4
+        ],
+        "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+        "stock": 14
+    },
+    {
+        "id": 38,
+        "skillsId": [
+            14,
+            17,
+            18,
+            16
+        ],
+        "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+        "stock": 5
+    },
+    {
+        "id": 39,
+        "skillsId": [
+            8,
+            3,
+            9,
+            3,
+            6,
+            16,
+            10,
+            5,
+            18,
+            12
+        ],
+        "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+        "stock": 11
+    },
+    {
+        "id": 40,
+        "skillsId": [
+            1,
+            15,
+            14,
+            1
+        ],
+        "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+        "stock": 20
+    },
+    {
+        "id": 41,
+        "skillsId": [
+            20,
+            1
+        ],
+        "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+        "stock": 6
+    },
+    {
+        "id": 42,
+        "skillsId": [
+            8,
+            20,
+            8,
+            13,
+            16
+        ],
+        "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+        "stock": 19
+    },
+    {
+        "id": 43,
+        "skillsId": [
+            11,
+            8,
+            15,
+            7,
+            12,
+            11,
+            1,
+            13
+        ],
+        "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+        "stock": 9
+    },
+    {
+        "id": 44,
+        "skillsId": [
+            10,
+            5,
+            7,
+            13,
+            14
+        ],
+        "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+        "stock": 9
+    },
+    {
+        "id": 45,
+        "skillsId": [
+            10,
+            1
+        ],
+        "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+        "stock": 18
+    },
+    {
+        "id": 46,
+        "skillsId": [
+            18,
+            6,
+            13,
+            5,
+            5,
+            2
+        ],
+        "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+        "stock": 13
+    },
+    {
+        "id": 47,
+        "skillsId": [
+            8,
+            2,
+            4
+        ],
+        "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+        "stock": 15
+    },
+    {
+        "id": 48,
+        "skillsId": [
+            4,
+            9,
+            20,
+            3
+        ],
+        "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+        "stock": 20
+    },
+    {
+        "id": 49,
+        "skillsId": [
+            4,
+            11,
+            14,
+            15,
+            13,
+            13,
+            15,
+            19
+        ],
+        "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        "stock": 10
+    },
+    {
+        "id": 50,
+        "skillsId": [
+            19,
+            10,
+            18
+        ],
+        "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+        "stock": 12
+    }
 ]
