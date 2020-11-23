@@ -11,7 +11,7 @@ const appointsData = require('../data/appointment.json');
 app.get('/controllers/appointment', (req, res) => res.json(appointsData));
 
 //Get appointmens by ID
-app.get('/controllers/appointment/id/:id', (req, res) => {
+app.get('/controllers/appointment/getAppointmentById/:id', (req, res) => {
     const found = appointsData.some(appoint => appoint.id === parseInt(req.params.id));
     
     if(found){
@@ -22,7 +22,7 @@ app.get('/controllers/appointment/id/:id', (req, res) => {
 });
 
 //Get appointments by  building ID
-app.get('/controllers/appointment/buildingId/:buildingId', (req, res) => {
+app.get('/controllers/appointment/getAppointmentByBuildingId/:buildingId', (req, res) => {
     const found = appointsData.some(appoint => appoint.buildingId === parseInt(req.params.buildingId));
     
     if(found){
@@ -33,7 +33,7 @@ app.get('/controllers/appointment/buildingId/:buildingId', (req, res) => {
 });
 
 //Get appointments by  boiler ID
-app.get('/controllers/appointment/boilerId/:boilerId', (req, res) => {
+app.get('/controllers/appointment/getAppointmentByBoilerId/:boilerId', (req, res) => {
     const found = appointsData.some(appoint => appoint.boilerId === parseInt(req.params.boilerId));
     
     if(found){
@@ -44,7 +44,7 @@ app.get('/controllers/appointment/boilerId/:boilerId', (req, res) => {
 });
 
 //Get appointments by  start timestamp
-app.get('/controllers/appointment/startTimestamp/:start_timestamp', (req, res) => {
+app.get('/controllers/appointment/getAppointmentByStartTimestamp/:start_timestamp', (req, res) => {
     const found = appointsData.some(appoint => appoint.start_timestamp === (req.params.start_timestamp));
     
     if(found){
@@ -55,7 +55,7 @@ app.get('/controllers/appointment/startTimestamp/:start_timestamp', (req, res) =
 });
 
 //Get appointments by  end timestamp
-app.get('/controllers/appointment/endTimestamp/:end_timestamp', (req, res) => {
+app.get('/controllers/appointment/getAppointmentByEndTimestamp/:end_timestamp', (req, res) => {
     const found = appointsData.some(appoint => appoint.end_timestamp === (req.params.end_timestamp));
     
     if(found){
@@ -66,12 +66,10 @@ app.get('/controllers/appointment/endTimestamp/:end_timestamp', (req, res) => {
 });
 //Delete appointments by ID
 
-app.delete('/controllers/appointment/id/:id', (req, res) => {
+app.delete('/controllers/appointment/deleteAppointmentById/:id', (req, res) => {
     const found = appointsData.some(appoint => appoint.id === parseInt(req.params.id));
-    const i = appointsData.indexOf(req.params.id);
     if(found){
         res.json({msg: 'Appointment canceled',appointsData: appointsData.filter(appoint => appoint.id !== parseInt(req.params.id))});
-        appointsData.splice(i-1, i);
         console.log(appointsData);
     } else {
         res.status(400).json({msg: 'There is not appointment with the ID requested. Please insert a valid appointment ID.'});
