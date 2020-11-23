@@ -19,4 +19,16 @@ app.get("/getBoilerTypeById/:id", (req, res) => {
     }
 });
 
+// getBoilerTypeBySkillsId
+app.get("/getBoilerTypeBySkillsId/:skillsId", (req, res) => {
+    const skillsIdNumber = parseInt(req.params.skillsId);
+    const found = boilerTypes.some(boilerTypes => boilerTypes.skillsId.includes(skillsIdNumber));
+
+    if (found) {
+        res.json(boilerTypes.filter(boilerTypes => boilerTypes.skillsId.includes(skillsIdNumber)))
+    } else {
+        res.status(400).json({ msg: `No boiler type with the skill id of ${req.params.skillsId}`})
+    }
+});
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
