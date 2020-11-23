@@ -20,7 +20,7 @@ app.get("/getBoilerTypeById/:id", (req, res) => {
 });
 
 // getBoilerTypeBySkillsId
-app.get("/getBoilerTypeBySkillsId/:skillsId", (req, res) => {
+app.get("/getBoilerTypesBySkillsId/:skillsId", (req, res) => {
     const skillsIdNumber = parseInt(req.params.skillsId);
     const found = boilerTypes.some(boilerTypes => boilerTypes.skillsId.includes(skillsIdNumber));
 
@@ -39,6 +39,17 @@ app.get("/getBoilerTypesByDescription/:description", (req, res) =>{
         res.json(boilerTypes.filter(boilerTypes => boilerTypes.description === String(req.params.description)))
     } else {
         res.status(400).json({ msg: `No boiler type with the description of ${req.params.description}`})
+    }
+});
+
+// getBoilerTypesByStock
+app.get("/getBoilerTypesByStock/:stock", (req, res) => {
+    const found = boilerTypes.some(boilerTypes => boilerTypes.stock === parseInt(req.params.stock));
+
+    if (found) {
+        res.json(boilerTypes.filter(boilerTypes => boilerTypes.stock === parseInt(req.params.stock)));
+    } else {
+        res.status(400).json({ msg: `No boiler type with the stock of ${req.params.stock}`})
     }
 });
 
