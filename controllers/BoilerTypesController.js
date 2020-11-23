@@ -53,4 +53,17 @@ app.get("/getBoilerTypesByStock/:stock", (req, res) => {
     }
 });
 
+// deleteBoilerById
+app.delete ("/:id", (req, res) => {
+    const found = boilerTypes.some(boilerTypes => boilerTypes.id === parseInt(req.params.id))
+    
+    if (found){
+        res.json({ 
+            msg: `Member with the id ${req.params.id} deleted`, 
+        });
+    } else {
+        res.status(400).json({ msm: `No member with the id of ${req.params.id}`});
+    }
+})
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
