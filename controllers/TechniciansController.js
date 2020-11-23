@@ -1,5 +1,4 @@
 const express = require(`express`);
-const { find } = require("../../Express/Members");
 const app = express();
 const technicians = require ("../data/Technicians.json")
 const PORT = process.env.PORT || 5000;
@@ -10,21 +9,23 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 app.get("/", (req, res)=>{
     res.json(technicians)
 });
+
 //getTechnicianById
 app.get("/getTechnicianById/:id", (req,res) =>{
     const found = technicians.filter (technician => technician.id === parseInt(req.params.id));
     
     if (found){
-        res.json(found)
+        res.json(found.length > 0)
     } else {
         res.status(400).json({ msg: `No technician with the id of ${req.params.id}`})
     }
 });
+//getByAttribute
 //getTechnicianByFirstName
 app.get("/getTechnicianByFirstName/:first_name", (req,res) =>{
     const found = technicians.filter (technician => technician.first_name === String (req.params.first_name));
 
-    if (found){
+    if (found.length > 0){
         res.json(found);
     } else {
         res.status(400).json({ msg: `No technician with the name of ${req.params.first_name}`})
@@ -32,10 +33,9 @@ app.get("/getTechnicianByFirstName/:first_name", (req,res) =>{
 });
 //getTechnicianByLastName
 app.get("/getTechnicianByLastName/:last_name", (req,res) =>{
-    
     const found = technicians.filter(technician => technician.last_name === String (req.params.last_name));
     
-    if (found){
+    if (found.length > 0){
         res.json(found);
     } else {
         res.status(400).json({ msg: `No technician with the last name of ${req.params.last_name}`})
@@ -45,7 +45,7 @@ app.get("/getTechnicianByLastName/:last_name", (req,res) =>{
 app.get("/gettechnicianByEmail/:email", (req,res) =>{
     const found = technicians.filter (technician => technician.email === String (req.params.email));
 
-    if (found){
+    if (found.length > 0){
         res.json(found);
     } else {
         res.status(400).json({ msg: `No technician with the email of ${req.params.email}`})
@@ -57,7 +57,7 @@ app.get("/getTechnicianBySkillsId/:skillsId", (req,res) =>{
     const skillsId = parseInt (req.params.skillsId);
     const found = technicians.filter(technician => technician.skillsId.includes(skillsId));
     
-    if (found){
+    if (found.length > 0){
         res.json(found);
     } else {
         res.status(400).json({ msg: `No technician with the skill ID of ${req.params.skillsId}`})
@@ -65,9 +65,9 @@ app.get("/getTechnicianBySkillsId/:skillsId", (req,res) =>{
 });
 //getTechnicianByHourRate
 app.get("/getTechnicianByHourRate/:hour_rate", (req,res) =>{
-    const found = technicians.filter (technician => technician.hour_rate === parseInt (req.params.hour_rate));
+    const found = technicians.filter (technician => parseInt(technician.hour_rate) === parseInt (req.params.hour_rate));
 
-    if (found){
+    if (found.length > 0){
         res.json(found);
     } else {
         res.status(400).json({ msg: `No technician with the hour rate of ${req.params.hour_rate}`})
@@ -76,9 +76,9 @@ app.get("/getTechnicianByHourRate/:hour_rate", (req,res) =>{
 
 //getTechnicianByDailyCapacity
 app.get("/getTechnicianByDailyCapacity/:dailyCapacity", (req,res) =>{
-    const found = technicians.filter (technician => technician.daily_capacity === String (req.params.daily_capacity));
+    const found = technicians.filter (technician => technician.daily_capacity === parseInt (req.params.daily_capacity));
 
-    if (found){
+    if (found.length > 0){
         res.json(found);
     } else {
         res.status(400).json({ msg: `No technician with the daily capacity of ${req.params.daily_capacity}`})
@@ -99,3 +99,5 @@ app.delete ("/:id", (req, res)=>{
         res.status(400).json({ msm: `No member with the id of ${req.params.id}`});
     }
 })
+
+app.listen(PORT, () => console.log('Server started on port ${PORT}'));
