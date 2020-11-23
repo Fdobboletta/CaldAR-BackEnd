@@ -42,9 +42,9 @@ app.get("/getCustomerByEmail/:email", (req,res) => {
 
 //getCustomerByBuilding
 app.get("/getCustomerByBuilding/:buildings", (req,res) => {
-    const found = customers.some(customer => customer.buildings.includes(perseInt(req.params.buildings)));
+    const found = customers.some(customer => customer.buildings.includes(parseInt(req.params.buildings)));
     if (found) {
-        res.json(customers.filter(customer => customer.buildings.includes(perseInt(req.params.buildings))));
+        res.json(customers.filter(customer => customer.buildings.includes(parseInt(req.params.buildings))));
     } else {
         res.status(400).json({ msg: `No customer with the customer type ${req.params.buildings}`});
     }
