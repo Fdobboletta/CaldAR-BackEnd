@@ -7,12 +7,14 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 // getTechniciansAll
 app.get("/", (req, res)=>{
-    res.json(technicians)
+    res.status(200).json(technicians)
 });
 
 //getTechnicianById
 app.get("/getTechnicianById/:id", (req,res) =>{
-    const found = technicians.filter (technician => technician.id === parseInt(req.params.id));
+    const found = technicians.filter (technician => 
+        technician.id === parseInt(req.params.id)
+    );
     
     if (found.length > 0){
         res.status(200).json(found)
@@ -23,7 +25,9 @@ app.get("/getTechnicianById/:id", (req,res) =>{
 //getByAttribute
 //getTechnicianByFirstName
 app.get("/getTechnicianByFirstName/:first_name", (req,res) =>{
-    const found = technicians.filter (technician => technician.first_name === String (req.params.first_name));
+    const found = technicians.filter (technician =>
+        technician.first_name === String(req.params.first_name)
+    );
 
     if (found.length > 0){
         res.status(200).json(found);
@@ -33,7 +37,9 @@ app.get("/getTechnicianByFirstName/:first_name", (req,res) =>{
 });
 //getTechnicianByLastName
 app.get("/getTechnicianByLastName/:last_name", (req,res) =>{
-    const found = technicians.filter(technician => technician.last_name === String (req.params.last_name));
+    const found = technicians.filter(technician => 
+        technician.last_name === String(req.params.last_name)
+    );
     
     if (found.length > 0){
         res.status(200).json(found);
@@ -43,7 +49,9 @@ app.get("/getTechnicianByLastName/:last_name", (req,res) =>{
 });
 //getTechnicianByEmail
 app.get("/gettechnicianByEmail/:email", (req,res) =>{
-    const found = technicians.filter (technician => technician.email === String (req.params.email));
+    const found = technicians.filter (technician => 
+        technician.email === String (req.params.email)
+    );
 
     if (found.length > 0){
         res.status(200).json(found);
@@ -55,7 +63,9 @@ app.get("/gettechnicianByEmail/:email", (req,res) =>{
 //getTechnicianBySkillsId
 app.get("/getTechnicianBySkillsId/:skillsId", (req,res) =>{
     const skillsId = parseInt (req.params.skillsId);
-    const found = technicians.filter(technician => technician.skillsId.includes(skillsId));
+    const found = technicians.filter(technician => 
+        technician.skillsId.includes(skillsId)
+    );
     
     if (found.length > 0){
         res.status(200).json(found);
@@ -65,7 +75,9 @@ app.get("/getTechnicianBySkillsId/:skillsId", (req,res) =>{
 });
 //getTechnicianByHourRate
 app.get("/getTechnicianByHourRate/:hour_rate", (req,res) =>{
-    const found = technicians.filter (technician => parseInt(technician.hour_rate) === parseInt (req.params.hour_rate));
+    const found = technicians.filter (technician => 
+        parseInt(technician.hour_rate) === parseInt (req.params.hour_rate)
+    );
 
     if (found.length > 0){
         res.status(200).json(found);
@@ -76,7 +88,9 @@ app.get("/getTechnicianByHourRate/:hour_rate", (req,res) =>{
 
 //getTechnicianByDailyCapacity
 app.get("/getTechnicianByDailyCapacity/:dailyCapacity", (req,res) =>{
-    const found = technicians.filter (technician => technician.daily_capacity === parseInt (req.params.daily_capacity));
+    const found = technicians.filter (technician => 
+        technician.daily_capacity === parseInt (req.params.daily_capacity)
+    );
 
     if (found.length > 0){
         res.status(200).json(found);
@@ -88,7 +102,9 @@ app.get("/getTechnicianByDailyCapacity/:dailyCapacity", (req,res) =>{
 
 //deleteTechnicianById
 app.delete ("/:id", (req, res)=>{
-    const found = technicians.some(technician =>technician.id === parseInt(req.params.id))
+    const found = technicians.some(technician =>
+        technician.id === parseInt(req.params.id)
+    )
     
     if (found){
         res.status(200).json({ 
