@@ -22,7 +22,6 @@ app.get("/getTechnicianById/:id", (req,res) =>{
         res.status(400).json({ msg: `No technician with the id of ${req.params.id}`})
     }
 });
-//getByAttribute
 //getTechnicianByFirstName
 app.get("/getTechnicianByFirstName/:first_name", (req,res) =>{
     const found = technicians.filter (technician =>
