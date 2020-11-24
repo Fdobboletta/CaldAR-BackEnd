@@ -7,7 +7,7 @@ app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 // getAllBuildings
 app.get("/getAllBuildings", (req, res)=>{
-    res.json(buildings)
+    res.status(200).json(buildings)
 });
 
 //getBuildingById
@@ -15,7 +15,7 @@ app.get("/getBuildingById/:id", (req,res) =>{
     const found = buildings.filter (building => building.id === parseInt(req.params.id));
     
     if (found.length > 0){
-        res.json(found)
+        res.status(200).json(found)
     } else {
         res.status(400).json({ msg: `No building with the id of ${req.params.id}`})
     }
@@ -27,7 +27,7 @@ app.get("/getBuildingByAddress/:address", (req,res) =>{
     const found = buildings.filter (building => building.address === String (req.params.address));
 
     if (found.length > 0){
-        res.json(found);
+        res.status(200).json(found);
     } else {
         res.status(400).json({ msg: `No building with the address of ${req.params.address}`})
     }
@@ -38,7 +38,7 @@ app.get("/getBuildingByBoilersId/:boilersId", (req,res) =>{
     const found = buildings.filter(building => building.boilersId.includes(boilersIdNumber));
     
     if (found.length > 0){
-        res.json(found);
+        res.status(200).json(found);
     } else {
         res.status(400).json({ msg: `No building with the boiler ID of ${req.params.boilersId}`})
     }
@@ -48,7 +48,7 @@ app.get("/getBuildingsByFullName/:fullName", (req,res) =>{
     const found = buildings.filter (building => building.fullName === String (req.params.fullName));
 
     if (found.length > 0){
-        res.json(found);
+        res.status(200).json(found);
     } else {
         res.status(400).json({ msg: `No building with the name of ${req.params.fullName}`})
     }
@@ -69,7 +69,7 @@ app.delete ("/:id", (req, res)=>{
     const found = buildings.some(building =>building.id === parseInt(req.params.id))
     
     if (found){
-        res.json({ 
+        res.status(200).json({ 
             msg: `Member deleted`, 
             buildings:buildings.filter(building => building.id !== parseInt(req.params.id ))
         });
