@@ -1,1 +1,0 @@
-// Place javascript control functions in files in the "controllers" folder
