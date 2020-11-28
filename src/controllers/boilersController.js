@@ -1,9 +1,10 @@
 const boilers = require("../models/boilers");
 
+
 // Add a new Boiler
 exports.create = (req, res) => {
     //Validate Request
-    if(!req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.hour_maintenance_cost || !req.body.hour_eventual_cost){
+    if(!req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost) {
         res.status(400).send ({msg: "Content can not be empty"});
         return;
     }
@@ -11,7 +12,7 @@ exports.create = (req, res) => {
     //Create a new Boiler
     const boiler = new boilers({
         description: req.body.description,
-        type: req.body.type,
+        boilerType: req.body.boilerType,
         maintenance_period: req.body.maintenance_period,
         hour_maintenance_cost: req.body.hour_maintenance_cost,
         hour_eventual_cost: req.body.hour_eventual_cost,
@@ -44,6 +45,26 @@ exports.findAll = (req, res) => {
             })
         }) 
 }
+
+// Get Boiler by ID
+exports.findById = (req,res) => {
+    boilers.findById(req.params.id)
+        .then(data => {
+            if (!data) {
+                return res.status(404).send({
+                  message: `Boiler with id ${req.params.id} was not found`
+                })
+            }
+            res.send(data)
+        })
+        .catch(err => {
+            res.status(500).send ({
+                message:
+                     "Some error occurred while retrieving boiler."
+            });
+        });
+}
+
 
 // Delete a Boiler with an specified id in the request
 exports.delete = (req, res) => {

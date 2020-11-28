@@ -3,7 +3,12 @@ const router = require('./routes');
 const mongoose = require('mongoose');
 const PORT = 4000;
 const app = express();
+const  bodyParser = require('body-parser');
 
+// support parsing of application/json type post data
+app.use(bodyParser.json());
+//support parsing of application/x-www-form-urlencoded post data
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(router);
 

@@ -25,4 +25,5 @@ const boilersSchema = new Schema(
         }
     }
 )
-export default mongoose.model('boilers', boilersSchema);
+const Boilers = mongoose.model('Boilers', boilersSchema);
+module.exports = Boilers;

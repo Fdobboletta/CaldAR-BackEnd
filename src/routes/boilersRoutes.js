@@ -7,6 +7,11 @@ router.post("/", boilers.create);
 // Get all Boilers
 router.get("/", boilers.findAll);
 
+// Get Boiler by Id
+router.get("/:id", boilers.findById);
+
+
 // Delete a Boiler
+router.delete("/:id", boilers.delete)
 
 module.exports = router;
