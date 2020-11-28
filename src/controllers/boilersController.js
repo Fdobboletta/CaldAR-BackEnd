@@ -1,4 +1,4 @@
-const boilers = require("../models/boilers.js");
+const boilers = require("../models/boilers");
 
 // Add a new Boiler
 exports.create = (req, res) => {
