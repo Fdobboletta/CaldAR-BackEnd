@@ -4,7 +4,8 @@
     "description": "BE of the administration app",
     "main": "index.js",
     "scripts": {
-        "test": "npm test"
+        "test": "npm test",
+        "start": "node src/index.js"
     },
     "repository": {
         "type": "git",
