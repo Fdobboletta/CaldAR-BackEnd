@@ -4,7 +4,8 @@
     "description": "BE of the administration app",
     "main": "index.js",
     "scripts": {
-        "test": "npm test"
+        "test": "npm test",
+        "start": "node src/index.js"
     },
     "repository": {
         "type": "git",
@@ -13,7 +14,8 @@
     "author": "bsd M1",
     "license": "ISC",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "mongoose": "^5.10.16"
     },
     "devDependencies": {
         "nodemon": "^2.0.6"
