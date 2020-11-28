@@ -1,10 +1,11 @@
-const boilers = require('../models/boilers.js')
+const boilers = require("../models/boilers.js");
 
 // Add a new Boiler
 exports.create = (req, res) => {
     //Validate Request
     if(!req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.hour_maintenance_cost || !req.body.hour_eventual_cost){
         res.status(400).send ({msg: "Content can not be empty"});
+        return;
     }
 
     //Create a new Boiler
@@ -34,7 +35,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
     boilers.find({})
         .then(data => {
-            res.send(data):
+            res.send(data);
         })
         .catch(err => {
             res.status(500).send({
@@ -43,3 +44,17 @@ exports.findAll = (req, res) => {
             })
         }) 
 }
+
+// Delete a Boiler with an specified id in the request
+exports.delete = (req, res) => {
+    const id = req.params.id;
+    boilers.findOneAndRemove({id}, {useFindAndModify: false})
+    .then (data =>
+        res.send({message: "Boiler was deleted successfully."})    
+    )
+    .catch(err => {
+        res.status(500).send ({
+            message: "Error removing Boiler with id:" + id
+        });
+    });
+};
