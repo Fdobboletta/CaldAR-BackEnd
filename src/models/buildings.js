@@ -29,4 +29,4 @@ const buildingsSchema = new Schema(
         }
     }
 )
-export default mongoose.model('buildings', buildingsSchema);
+module.exports = mongoose.model('buildings', buildingsSchema);
