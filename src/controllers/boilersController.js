@@ -1,5 +1,5 @@
+const Boilers = require("../models/boilers");
 const boilers = require("../models/boilers");
-
 
 // Add a new Boiler
 exports.create = (req, res) => {
@@ -26,8 +26,7 @@ exports.create = (req, res) => {
         })
         .catch(err=>{ 
             res.status(500).send({
-              message:
-                err.message || "Some error occurred while creating the boiler."
+              message: "Some error occurred while creating the boiler."
             });
         });
 };
@@ -40,13 +39,12 @@ exports.findAll = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message:
-                   err.message || "Some error occurred while getting all boilers." 
+                message: "Some error occurred while getting all boilers." 
             })
         }) 
-}
+};
 
-// Get Boiler by ID
+// Get Boiler by Id
 exports.findById = (req,res) => {
     boilers.findById(req.params.id)
         .then(data => {
@@ -59,23 +57,67 @@ exports.findById = (req,res) => {
         })
         .catch(err => {
             res.status(500).send ({
-                message:
-                     "Some error occurred while retrieving boiler."
+                message: "Some error occurred while retrieving boiler."
             });
         });
-}
+};
 
-
-// Delete a Boiler with an specified id in the request
+// Delete a Boiler with an specified Id in the request
 exports.delete = (req, res) => {
-    const id = req.params.id;
-    boilers.findOneAndRemove({id}, {useFindAndModify: false})
-    .then (data =>
-        res.send({message: "Boiler was deleted successfully."})    
-    )
-    .catch(err => {
-        res.status(500).send ({
-            message: "Error removing Boiler with id:" + id
+    boilers.findByIdAndRemove(req.params.id , { useFindAndModify: false })
+        .then (data => {
+            if (!data) {
+                return res.status(404).send ({
+                    message: `Cannot delete Boiler with id ${req.params.id}. Maybe Boiler was not found.`
+                })
+            } 
+            res.send({message: "Boiler was deleted successfully."});  
+        })
+        .catch(err => {
+            res.status(500).send ({
+                message: "Error removing Boiler with id:" + id
+            });
         });
-    });
+};
+
+// Update a Boiler by the Id in the request
+exports.update = (req, res) => {
+    // Validate request
+    if(!req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost) {
+        res.status(400).send({ message: "Content can not be empty!" });
+      return;
+    }
+  
+    Boilers.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })
+        .then(data => {
+            if (!data) {
+                res.status(404).send({
+                    message: `Cannot update Boiler with id=${req.params.id}. Maybe Boiler was not found!`
+                });
+            }
+            res.send({ message: "Boiler was updated successfully." });
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Error updating Boiler with id=" + id
+            });
+        });
+};
+
+// Get all Boilers with a specific attribute (boilerType)
+exports.find = (req, res) => {
+    boilers.find( {boilerType: req.params.boilerType })
+        .then(data => {
+            if (data.length < 1) {
+                return res.status(404).send({
+                  message: `Boiler with id ${req.params.boilerType} was not found`
+                })
+            }
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Some error occurred while getting all boilers." 
+            })
+        }) 
 };
