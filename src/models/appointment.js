@@ -33,6 +33,10 @@ const appointmentsSchema = new Schema (
             type: Number,
             required: true,
         },
+        maintainceType: {
+            type: String,
+            required: true,
+        }
 
     }
 )
