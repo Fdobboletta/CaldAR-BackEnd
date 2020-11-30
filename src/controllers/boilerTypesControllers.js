@@ -81,7 +81,7 @@ exports.findByAttr = (req, res) => {
         }) 
 }
 
-/*
+
 //Update existing type selected by id
 exports.update = (req, res) => {
     //validate
@@ -89,13 +89,17 @@ exports.update = (req, res) => {
         res.status(400).json({msg: 'Content can not be empty.'});
         return;
     }
+    const id = req.params.id;
 
-    const newValues = req.body.description
-
-    boilerType
-        .save()
+    BoilerTypes.findByIdAndUpdate(id, req.body , { useFindAndModify: false })
         .then(data => {
+            if (!data) {
+                return res.status(404).send({
+                    message: `Cannot update Boiler Type with id=${req.params.id}. Maybe Type was not found!`
+                });
+            }
             res.send(data);
+            console.log(data);
         })
         .catch((err => { 
             res.status(500).send({
@@ -108,22 +112,29 @@ exports.update = (req, res) => {
 
 //Delete type
 exports.delete = (req, res) => {
-    // validate
     const id = req.params.id;
 
+    //validate
     if(!id){
         res.status(400).json({msg: 'Content can not be empty.'});
-        return;  
+        return;
     }
 
-    boilerTypes.findOneAndRemove({id}, {useFindAndModify: false})
-    .then (data =>
-        res.send({message: 'Boiler Type was deleted successfully.'})    
-    )
-    .catch(err => {
-        res.status(500).send ({
-            message: "Error removing Boiler type with id:" + id
-        });
-    });
-};
-*/
+    BoilerTypes.findByIdAndRemove(id, { useFindAndModify: false })
+        .then(data => {
+            if (!data) {
+                return res.status(404).send({
+                    message: `Cannot update Boiler Type with id=${req.params.id}. Maybe Type was not found!`
+                });
+            }
+            res.send(data);
+            console.log('boiler type deleted');
+        })
+        .catch((err => { 
+            res.status(500).send({
+                message:
+                err.message || "Some error occurred while creating the boiler."
+            });
+        }))
+
+}

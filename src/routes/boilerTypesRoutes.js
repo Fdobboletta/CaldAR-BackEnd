@@ -7,15 +7,15 @@ router.post('/', boilerTypes.create);
 router.get('/', boilerTypes.findAll);
 
 //Get one type by ID
-router.get('/id/:id', boilerTypes.findById);
+router.get('/:id', boilerTypes.findById);
 
 //Get one type by Attr
 router.get('/description/:description', boilerTypes.findByAttr);
 
 //Update one type
-// router.put('/:id', boilerTypes);
+router.put('/:id', boilerTypes.update);
 
 //Delete type
-// router.delete('/:id', booilerTypes.delete);
+router.delete('/:id', boilerTypes.delete);
 
 module.exports = router;
