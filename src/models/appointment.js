@@ -22,14 +22,14 @@ const appointmentsSchema = new Schema (
             required: true,
         },
         start_timestamp: {
-            type: timestamp,
+            type: String,
             required: true,
         },
         end_timestamp: {
-            type: timestamp,
+            type: String,
             required: true,
         },
-        monthly_hourse: {
+        monthly_hours: {
             type: Number,
             required: true,
         },
@@ -40,4 +40,5 @@ const appointmentsSchema = new Schema (
 
     }
 )
-module.exports = mongoose.model('Appointments', appointmentsSchema);
+const Appointments = mongoose.model('Appointment', appointmentsSchema);
+module.exports = Appointments;
