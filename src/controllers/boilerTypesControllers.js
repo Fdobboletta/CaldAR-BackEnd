@@ -1,9 +1,11 @@
-const BoilerTypes = require('../models/boilerTypes');
+const BoilerTypes = require('../models/BoilerTypes');
 
+const emptyDescription = !req.body.description;
+const id = req.params.id;
 //Create new type
 exports.create = (req, res) => {
     //validate
-    if(!req.body.description){
+    if(emptyDescription){
         res.status(400).json({msg: 'Content can not be empty.'});
         return;
     }
@@ -16,6 +18,7 @@ exports.create = (req, res) => {
         .then(data => {
             console.log(data);
             res.send(data);
+            res.status(200);
         })
         .catch((err => { 
             res.status(500).send({
@@ -31,6 +34,7 @@ exports.findAll = (req, res) => {
     BoilerTypes.find({})
         .then(data => {
             res.send(data);
+            res.status(200);
         })
         .catch(err => {
             res.status(500).send({
@@ -43,7 +47,6 @@ exports.findAll = (req, res) => {
 //Get one type by ID
 exports.findById = (req, res) => {
     // validate
-    const id = req.params.id;
 
     if(!id){
         res.status(400).json({msg: 'Content can not be empty.'});
@@ -55,6 +58,7 @@ exports.findById = (req, res) => {
                 return res.status(404).send({msg: 'boilerType Id not found'})
             }
             res.send(data);
+            res.status(200);
         })
         .catch(err => {
             res.status(500).send({
@@ -72,6 +76,7 @@ exports.findByAttr = (req, res) => {
                 return res.status(404).send({msg: 'boilerType Id not found'})
             }
             res.send(data);
+            res.status(200);
         })
         .catch(err => {
             res.status(500).send({
@@ -85,21 +90,21 @@ exports.findByAttr = (req, res) => {
 //Update existing type selected by id
 exports.update = (req, res) => {
     //validate
-    if(!req.body.description){
+    if(emptyDescription){
         res.status(400).json({msg: 'Content can not be empty.'});
         return;
     }
-    const id = req.params.id;
 
     BoilerTypes.findByIdAndUpdate(id, req.body , { useFindAndModify: false })
         .then(data => {
             if (!data) {
                 return res.status(404).send({
-                    message: `Cannot update Boiler Type with id=${req.params.id}. Maybe Type was not found!`
+                    message: `Cannot update Boiler Type with id=${id}. Maybe Type was not found!`
                 });
             }
             res.send(data);
             console.log(data);
+            res.status(200);
         })
         .catch((err => { 
             res.status(500).send({
@@ -112,7 +117,6 @@ exports.update = (req, res) => {
 
 //Delete type
 exports.delete = (req, res) => {
-    const id = req.params.id;
 
     //validate
     if(!id){
@@ -124,7 +128,7 @@ exports.delete = (req, res) => {
         .then(data => {
             if (!data) {
                 return res.status(404).send({
-                    message: `Cannot update Boiler Type with id=${req.params.id}. Maybe Type was not found!`
+                    message: `Cannot update Boiler Type with id=${id}. Maybe Type was not found!`
                 });
             }
             res.send(data);
