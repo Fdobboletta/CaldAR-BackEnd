@@ -23,8 +23,7 @@ exports.create = (req, res) => {
     company
         .save(company)
         .then(data => {
-            res.send(data);
-            res.status(200);
+            res.status(200).send(data);
         })
         .catch((err => { 
             res.status(500).send({
@@ -32,15 +31,13 @@ exports.create = (req, res) => {
                 err.message || "Some error occurred while creating the company."
             });
         }))
-
 }
 
 // Get all Companies
 exports.findAll = (req, res) => {
     Company.find({})
         .then(data => {
-            res.send(data);
-            res.status(200);
+            res.status(200).send(data);
         })
         .catch(err => {
             res.status(500).send({
@@ -64,8 +61,7 @@ exports.findById = (req, res) => {
             if(!data){
                 return res.status(404).send({msg: 'Company Id not found'})
             }
-            res.send(data);
-            res.status(200);
+            res.status(200).send(data);
         })
         .catch(err => {
             res.status(500).send({

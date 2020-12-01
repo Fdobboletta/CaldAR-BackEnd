@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
-//Initialice schemas
 const Schema = mongoose.Schema
-//Create new schema
 const CompanySchema = mongoose.Schema(
     {
         companyName: {
@@ -28,8 +26,5 @@ const CompanySchema = mongoose.Schema(
     { timestamps: true },
 
 );
-//Set a model based on the scheme
 const Company = mongoose.model('Company', CompanySchema);
-
-//export the new model to the rest of the app
 module.exports = Company;
