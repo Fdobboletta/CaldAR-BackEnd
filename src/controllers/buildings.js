@@ -4,13 +4,12 @@ var validateBuilding = !req.body.adress || !req.body.boliers || !req.body.compan
 
 // Add a new Building
 exports.create = (req, res) => {
-    //Validate Request
     if(validateBuilding) {
         res.status(400).send ({msg: "Content can not be empty"});
         return;
     }
 
-    //Create a new building
+    // Create a new building
     const building = new buildings({
         adress: req.body.adress,
         buildings: req.body.buildings,
@@ -19,7 +18,7 @@ exports.create = (req, res) => {
         phone: req.body.phone,
     });
 
-    //Save building in the database
+    // Save building in the database
     building
         .save(building)
         .then(data => {
