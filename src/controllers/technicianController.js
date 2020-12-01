@@ -3,14 +3,8 @@ const Technicians = require("../models/technician");
 // Add a new Technician
 exports.create = (req, res) => {
     //Validate Request
-    if (!req.body.appointments ||
-        !req.body.capabilities ||
-        !req.body.hour_rate ||
-        !req.body.monthly_capacity ||
-        !req.body.phone ||
-        !req.body.birthdate ||
-        !req.body.firstName ||
-        !req.body.lastName) {
+    const emptyAttribute = !req.body.appointments || !req.body.capabilities || !req.body.hour_rate || !req.body.monthly_capacity || !req.body.phone || !req.body.birthdate || !req.body.firstName || !req.body.lastName;
+    if (emptyAttribute) {
         res.status(400).send({ msg: "Content cannot be empty" });
         return;
     }
@@ -42,8 +36,8 @@ exports.create = (req, res) => {
 
 // Update a Technician by Id
 exports.update = (req, res) => {
-    const emptyAttribute = !req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost
-        // Validate request
+    const emptyAttribute = !req.body.appointments || !req.body.capabilities || !req.body.hour_rate || !req.body.monthly_capacity || !req.body.phone || !req.body.birthdate || !req.body.firstName || !req.body.lastName;
+    // Validate request
     if (emptyAttribute) {
         res.status(400).send({ message: "Content cannot be empty" });
         return;
