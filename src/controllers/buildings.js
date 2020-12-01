@@ -1,6 +1,6 @@
 const buildings = require("../models/buildings");
 
-const validateBuilding = !req.body.adress || !req.body.boliers || !req.body.companyId || !req.body.fullname || !req.body.phone;
+var validateBuilding = !req.body.adress || !req.body.boliers || !req.body.companyId || !req.body.fullname || !req.body.phone;
 
 // Add a new Building
 exports.create = (req, res) => {
