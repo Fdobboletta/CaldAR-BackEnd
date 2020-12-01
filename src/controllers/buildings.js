@@ -23,9 +23,9 @@ exports.create = (req, res) => {
     building
         .save(building)
         .then(data => {
-            res.send(data);
+            res.status(200).send(data);
         })
-        .catch(err=>{ 
+        .catch(err => { 
             res.status(500).send({
               message: "Some error occurred while creating the building."
             });
@@ -36,7 +36,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
     buildings.find({})
         .then(data => {
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch(err => {
             res.status(500).send({
@@ -54,7 +54,7 @@ exports.findById = (req,res) => {
                   message: `building with id ${req.params.id} was not found`
                 })
             }
-            res.send(data)
+            res.status(200).send(data)
         })
         .catch(err => {
             res.status(500).send ({
@@ -74,7 +74,7 @@ exports.delete = (req, res) => {
                 message: `There is no building with Id: ${req.params.id}`
             })
         }
-        res.send({message: "Building was deleted successfully."})    
+        res.status(200).send({message: "Building was deleted successfully."})    
     })
     .catch(err => {
         res.status(500).send ({
@@ -97,7 +97,7 @@ exports.update = (req, res) => {
                     message: `There is no building with id=${req.params.id}`
                 });
             }
-            res.send({ message: "Building updated successfully." });
+            res.status(200).send({ message: "Building updated successfully." });
         })
         .catch(err => {
             res.status(500).send({
@@ -115,7 +115,7 @@ exports.find = (req, res) => {
                   message: `Company with id ${req.params.companyId} was not found`
                 })
             }
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch(err => {
             res.status(500).send({
