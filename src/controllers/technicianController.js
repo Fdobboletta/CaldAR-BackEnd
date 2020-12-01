@@ -39,3 +39,31 @@ exports.create = (req, res) => {
             });
         });
 };
+
+// Update a Technician by Id
+exports.update = (req, res) => {
+    const emptyAttribute = !req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost
+    // Validate request
+    if(emptyAttribute) {
+        res.status(400).send({ message: "Content cannot be empty" });
+      return;
+    }
+  
+    Technicians.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })
+        .then(data => {
+            if (!data) {
+                res.status(404).send({
+                    message: `Cannot update Technician with id=${req.params.id}. Maybe Technician was not found!`
+                });
+            }
+            res.status(200).send ({ 
+                message: "Technician was updated successfully." 
+            });
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Error updating Technician with id ", id
+            });
+        });
+};
+
