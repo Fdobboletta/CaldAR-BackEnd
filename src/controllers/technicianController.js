@@ -2,8 +2,10 @@ const Technicians = require("../models/technician");
 
 // Add a new Technician
 exports.create = (req, res) => {
+
     //Validate Request
     const emptyAttribute = !req.body.appointments || !req.body.capabilities || !req.body.hour_rate || !req.body.monthly_capacity || !req.body.phone || !req.body.birthdate || !req.body.firstName || !req.body.lastName;
+
     if (emptyAttribute) {
         res.status(400).send({ msg: "Content cannot be empty" });
         return;
@@ -29,14 +31,16 @@ exports.create = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Some error occurred while creating the boiler."
+                message: err.message || "Some error occurred while creating the Technician."
             });
         });
 };
 
 // Update a Technician by Id
 exports.update = (req, res) => {
+
     const emptyAttribute = !req.body.appointments || !req.body.capabilities || !req.body.hour_rate || !req.body.monthly_capacity || !req.body.phone || !req.body.birthdate || !req.body.firstName || !req.body.lastName;
+
     // Validate request
     if (emptyAttribute) {
         res.status(400).send({ message: "Content cannot be empty" });
@@ -89,7 +93,7 @@ exports.findAll = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Some error occurred while getting all the technicians."
+                message: err.message || "Some error occurred while getting all the technicians."
             })
         })
 };
@@ -107,7 +111,7 @@ exports.findById = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Some error occurred while retrieving the technician."
+                message: err.message || "Some error occurred while retrieving the technician."
             });
         });
 };
@@ -125,7 +129,7 @@ exports.findByAttribute = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Some error occurred while getting the technicians."
+                message: err.message || "Some error occurred while getting the technicians."
             })
         })
 };
