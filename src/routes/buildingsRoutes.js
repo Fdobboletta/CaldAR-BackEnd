@@ -1,4 +1,4 @@
-const buildings = require("../controllers/buildingsController")
+const buildings = require("../controllers/buildings")
 const router = require("express").Router();
 
 // Add a new Building
