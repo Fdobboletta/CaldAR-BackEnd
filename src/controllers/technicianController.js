@@ -62,8 +62,27 @@ exports.update = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Error updating Technician with id ", id
+                message: "Error updating Technician with id " + req.params.id
             });
         });
 };
 
+// Delete a Technician with an specified Id
+exports.delete = (req, res) => {
+    Technicians.findByIdAndRemove(req.params.id , { useFindAndModify: false })
+        .then (data => {
+            if (!data) {
+                return res.status(404).send ({
+                    message: `Cannot delete Technician with id ${req.params.id}. Maybe Technician was not found.`
+                })
+            } 
+            res.status(200).send ({
+                message: "Technician was deleted successfully."
+            });  
+        })
+        .catch(err => {
+            res.status(500).send ({
+                message: "Error removing Technician with id " + req.params.id
+            });
+        });
+};

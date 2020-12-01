@@ -5,6 +5,9 @@ const router = require("express").Router();
 router.post("/", technicians.create);
 
 // Update a Technician
-router.put("/:id", technicians.update)
+router.put("/:id", technicians.update);
+
+// Delete a Technician
+router.delete("/:id", technicians.delete)
 
 module.exports = router;
