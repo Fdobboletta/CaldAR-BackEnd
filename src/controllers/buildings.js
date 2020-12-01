@@ -106,7 +106,7 @@ exports.update = (req, res) => {
 };
 
 // Get all Buildings with a specific attribute (CompanyId)
-exports.find = (req, res) => {
+exports.findByAttribute = (req, res) => {
     buildings.find( {companyId: req.params.companyId})
         .then(data => {
             if (data.length < 1) {
