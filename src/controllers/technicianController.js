@@ -86,3 +86,16 @@ exports.delete = (req, res) => {
             });
         });
 };
+
+// Get all Technicians
+exports.findAll = (req, res) => {
+    Technicians.find({})
+        .then(data => {
+            res.status(200).send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Some error occurred while getting all the technicians." 
+            })
+        }) 
+};

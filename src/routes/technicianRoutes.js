@@ -10,4 +10,7 @@ router.put("/:id", technicians.update);
 // Delete a Technician
 router.delete("/:id", technicians.delete)
 
+// Get all Technicians
+router.get("/", technicians.findAll)
+
 module.exports = router;
