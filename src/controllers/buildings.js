@@ -11,7 +11,7 @@ exports.create = (req, res) => {
     // Create a new building
     const building = new buildings({
         adress: req.body.adress,
-        buildings: req.body.buildings,
+        boliers: req.body.boilers,
         companyId: req.body.companyId,
         fullname: req.body.fullname,
         phone: req.body.phone,
