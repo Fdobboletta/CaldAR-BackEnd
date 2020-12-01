@@ -99,3 +99,21 @@ exports.findAll = (req, res) => {
             })
         }) 
 };
+
+// Get Technician by Id
+exports.findById = (req,res) => {
+    Technicians.findById(req.params.id)
+        .then(data => {
+            if (!data) {
+                return res.status(404).send({
+                  message: `Technician with id ${req.params.id} was not found`
+                })
+            }
+            res.status(200).send(data)
+        })
+        .catch(err => {
+            res.status(500).send ({
+                message: "Some error occurred while retrieving the technician."
+            });
+        });
+};

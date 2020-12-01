@@ -13,4 +13,7 @@ router.delete("/:id", technicians.delete)
 // Get all Technicians
 router.get("/", technicians.findAll)
 
+// Get Technician by Id
+router.get("/:id", technicians.findById)
+
 module.exports = router;
