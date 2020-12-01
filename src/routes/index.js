@@ -1,9 +1,11 @@
-const companyRouter = require('./companyRoutes')
+const boilerTypesRouter = require('./boilerTypesRoutes');
+const companyRouter = require('./companyRoutes');
+const boilersRouter = require('./boilersRoutes');
 const express = require('express');
 const router = express.Router();
-const boilersRouter = require('./boilersRoutes')
 
+router.use('/types', boilerTypesRouter);
 router.use('/company', companyRouter);
-router.use('/boilers', boilersRouter)
+router.use('/boilers', boilersRouter);
 
 module.exports = router;
