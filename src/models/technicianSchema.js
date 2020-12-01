@@ -3,15 +3,19 @@ const Schema = mongoose.Schema;
 
 const technicianSchema = new Schema(
     {
-        firstName: {
-            type: String,
+        appointments: {
+            type: Number,
             required: true,
         },
-        lastName: {
-            type: String,
+        capabilities: {
+            type: Number,
+            required: true,  
+        },
+        hour_rate: {
+            type: Number,
             required: true,
         },
-        id: {
+        monthly_capacity: {
             type: Number,
             required: true,
         },
@@ -19,22 +23,18 @@ const technicianSchema = new Schema(
             type: Number,
             required: true,
         },
-        email: {
-            type: String,
-            required: true,
-        },
         birthdate: {
             type: Date,
             required: true,
         },
-        address: {
+        firstName: {
             type: String,
             required: true,
         },
-        boilerType: {
+        lastName: {
             type: String,
-            required: true,  
-        },
+            required: true,
+        }
     }
 )
 const Technicians = mongoose.model('Technicians', technicianSchema);
