@@ -7,11 +7,13 @@ const bodyParser = require('body-parser');
 
 // support parsing of application/json type post data
 app.use(bodyParser.json());
+
 //support parsing of application/x-www-form-urlencoded post data
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(router);
 
+// DB Conection
 mongoose
     .connect('mongodb+srv://CaldAr-m1:caldar@caldar-m1.rpj9l.mongodb.net/CaldAr?retryWrites=true&w=majority',
         {useNewUrlParser: true, useUnifiedTopology: true}, )
