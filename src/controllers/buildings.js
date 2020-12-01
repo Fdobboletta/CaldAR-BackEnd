@@ -1,10 +1,11 @@
 const buildings = require("../models/buildings");
 
+const validateBuilding = !req.body.adress || !req.body.boliers || !req.body.companyId || !req.body.fullname || !req.body.phone;
 
 // Add a new Building
 exports.create = (req, res) => {
     //Validate Request
-    if(!req.body.adress || !req.body.boliers || !req.body.companyId || !req.body.fullname || !req.body.phone) {
+    if(validateBuilding) {
         res.status(400).send ({msg: "Content can not be empty"});
         return;
     }
@@ -84,8 +85,7 @@ exports.delete = (req, res) => {
 
 // Update a Building by Id
 exports.update = (req, res) => {
-    // Validate request
-    if(!req.body.adress || !req.body.boliers || !req.body.companyId || !req.body.fullname || !req.body.phone) {
+    if(validateBuilding) {
         res.status(400).send({ message: "Content can not be empty!" });
       return;
     }
@@ -123,3 +123,4 @@ exports.find = (req, res) => {
             })
         }) 
 };
+
