@@ -22,11 +22,11 @@ const appointmentsSchema = new Schema (
             required: true,
         },
         start_timestamp: {
-            type: String,
+            type: Date,
             required: true,
         },
         end_timestamp: {
-            type: String,
+            type: Date,
             required: true,
         },
         monthly_hours: {
