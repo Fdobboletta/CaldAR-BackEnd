@@ -26,8 +26,7 @@ exports.create = (req, res) => {
         })
         .catch(err=>{ 
             res.status(500).send({
-              message:
-                err.message || "Some error occurred while creating the building."
+              message: "Some error occurred while creating the building."
             });
         });
 };
@@ -40,8 +39,7 @@ exports.findAll = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message:
-                   err.message || "Some error occurred while getting all buildings." 
+                message: "Some error occurred while getting all buildings." 
             })
         }) 
 }
@@ -59,20 +57,24 @@ exports.findById = (req,res) => {
         })
         .catch(err => {
             res.status(500).send ({
-                message:
-                     "Some error occurred while retrieving building."
+                message: "Some error occurred while retrieving building."
             });
         });
-}
+};
 
 
 // Delete a Building by Id
 exports.delete = (req, res) => {
     const id = req.params.id;
     buildings.findOneAndRemove({id}, {useFindAndModify: false})
-    .then (data =>
+    .then (data => {
+        if (!data) {
+            return res.status(404).send ({
+                message: `There is no building with Id: ${req.params.id}`
+            })
+        }
         res.send({message: "Building was deleted successfully."})    
-    )
+    })
     .catch(err => {
         res.status(500).send ({
             message: "Error removing building with id:" + id
