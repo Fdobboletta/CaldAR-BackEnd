@@ -3,21 +3,21 @@ const Technicians = require("../models/technician");
 // Add a new Technician
 exports.create = (req, res) => {
     //Validate Request
-    if(!req.body.appointments || 
-        !req.body.capabilities || 
-        !req.body.hour_rate || 
-        !req.body.monthly_capacity || 
+    if (!req.body.appointments ||
+        !req.body.capabilities ||
+        !req.body.hour_rate ||
+        !req.body.monthly_capacity ||
         !req.body.phone ||
         !req.body.birthdate ||
         !req.body.firstName ||
         !req.body.lastName) {
-        res.status(400).send ({msg: "Content cannot be empty"});
+        res.status(400).send({ msg: "Content cannot be empty" });
         return;
     }
 
     //Create a new Technician
     const technician = new Technicians({
-        appointments: req.body.appointments, 
+        appointments: req.body.appointments,
         capabilities: req.body.capabilities,
         hour_rate: req.body.hour_rate,
         monthly_capacity: req.body.monthly_capacity,
@@ -33,9 +33,9 @@ exports.create = (req, res) => {
         .then(data => {
             res.send(data);
         })
-        .catch(err=>{ 
+        .catch(err => {
             res.status(500).send({
-              message: "Some error occurred while creating the boiler."
+                message: "Some error occurred while creating the boiler."
             });
         });
 };
@@ -43,12 +43,12 @@ exports.create = (req, res) => {
 // Update a Technician by Id
 exports.update = (req, res) => {
     const emptyAttribute = !req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost
-    // Validate request
-    if(emptyAttribute) {
+        // Validate request
+    if (emptyAttribute) {
         res.status(400).send({ message: "Content cannot be empty" });
-      return;
+        return;
     }
-  
+
     Technicians.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })
         .then(data => {
             if (!data) {
@@ -56,8 +56,8 @@ exports.update = (req, res) => {
                     message: `Cannot update Technician with id=${req.params.id}. Maybe Technician was not found!`
                 });
             }
-            res.status(200).send ({ 
-                message: "Technician was updated successfully." 
+            res.status(200).send({
+                message: "Technician was updated successfully."
             });
         })
         .catch(err => {
@@ -69,19 +69,19 @@ exports.update = (req, res) => {
 
 // Delete a Technician with an specified Id
 exports.delete = (req, res) => {
-    Technicians.findByIdAndRemove(req.params.id , { useFindAndModify: false })
-        .then (data => {
+    Technicians.findByIdAndRemove(req.params.id, { useFindAndModify: false })
+        .then(data => {
             if (!data) {
-                return res.status(404).send ({
+                return res.status(404).send({
                     message: `Cannot delete Technician with id ${req.params.id}. Maybe Technician was not found.`
                 })
-            } 
-            res.status(200).send ({
+            }
+            res.status(200).send({
                 message: "Technician was deleted successfully."
-            });  
+            });
         })
         .catch(err => {
-            res.status(500).send ({
+            res.status(500).send({
                 message: "Error removing Technician with id " + req.params.id
             });
         });
@@ -95,25 +95,43 @@ exports.findAll = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Some error occurred while getting all the technicians." 
+                message: "Some error occurred while getting all the technicians."
             })
-        }) 
+        })
 };
 
 // Get Technician by Id
-exports.findById = (req,res) => {
+exports.findById = (req, res) => {
     Technicians.findById(req.params.id)
         .then(data => {
             if (!data) {
                 return res.status(404).send({
-                  message: `Technician with id ${req.params.id} was not found`
+                    message: `Technician with id ${req.params.id} was not found`
                 })
             }
             res.status(200).send(data)
         })
         .catch(err => {
-            res.status(500).send ({
+            res.status(500).send({
                 message: "Some error occurred while retrieving the technician."
             });
         });
+};
+
+// Get all Technicians with a specific attribute (firstName)
+exports.findByAttribute = (req, res) => {
+    Technicians.find({ firstName: req.params.firstName })
+        .then(data => {
+            if (!data) {
+                return res.status(404).send({
+                    message: `Technician with first name ${req.params.firstName} was not found`
+                })
+            }
+            res.status(200).send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Some error occurred while getting the technicians."
+            })
+        })
 };

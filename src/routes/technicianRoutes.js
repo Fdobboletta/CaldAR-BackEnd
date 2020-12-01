@@ -16,4 +16,7 @@ router.get("/", technicians.findAll)
 // Get Technician by Id
 router.get("/:id", technicians.findById)
 
+// Get all Technicians with a specific attribute
+router.get("/attribute/:firstName", technicians.findByAttribute)
+
 module.exports = router;
