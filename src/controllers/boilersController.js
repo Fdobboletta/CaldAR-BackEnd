@@ -3,8 +3,9 @@ const boilers = require("../models/boilers");
 
 // Add a new Boiler
 exports.create = (req, res) => {
+    const emptyAttribute = !req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost
     //Validate Request
-    if(!req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost) {
+    if(emptyAttribute) {
         res.status(400).send ({msg: "Content can not be empty"});
         return;
     }
@@ -22,7 +23,7 @@ exports.create = (req, res) => {
     boiler
         .save(boiler)
         .then(data => {
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch(err=>{ 
             res.status(500).send({
@@ -35,7 +36,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
     boilers.find({})
         .then(data => {
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch(err => {
             res.status(500).send({
@@ -53,7 +54,7 @@ exports.findById = (req,res) => {
                   message: `Boiler with id ${req.params.id} was not found`
                 })
             }
-            res.send(data)
+            res.status(200).send(data)
         })
         .catch(err => {
             res.status(500).send ({
@@ -71,19 +72,22 @@ exports.delete = (req, res) => {
                     message: `Cannot delete Boiler with id ${req.params.id}. Maybe Boiler was not found.`
                 })
             } 
-            res.send({message: "Boiler was deleted successfully."});  
+            res.status(200).send ({
+                message: "Boiler was deleted successfully."
+            });  
         })
         .catch(err => {
             res.status(500).send ({
-                message: "Error removing Boiler with id:" + id
+                message: "Error removing Boiler with id:" + req.params.id
             });
         });
 };
 
 // Update a Boiler by the Id in the request
 exports.update = (req, res) => {
+    const emptyAttribute = !req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost
     // Validate request
-    if(!req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost) {
+    if(emptyAttribute) {
         res.status(400).send({ message: "Content can not be empty!" });
       return;
     }
@@ -95,7 +99,9 @@ exports.update = (req, res) => {
                     message: `Cannot update Boiler with id=${req.params.id}. Maybe Boiler was not found!`
                 });
             }
-            res.send({ message: "Boiler was updated successfully." });
+            res.status(200).send ({ 
+                message: "Boiler was updated successfully." 
+            });
         })
         .catch(err => {
             res.status(500).send({
@@ -113,7 +119,7 @@ exports.find = (req, res) => {
                   message: `Boiler with id ${req.params.boilerType} was not found`
                 })
             }
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch(err => {
             res.status(500).send({
