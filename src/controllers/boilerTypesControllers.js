@@ -1,6 +1,4 @@
 const BoilerTypes = require('../models/BoilerTypes');
-
-const id = req.params.id;
  
 exports.create = (req, res) => {
     if(!req.body.description){
