@@ -2,11 +2,11 @@ const appointments = require ("../models/appointment.js");
 
 //Add new appointment
 exports.create = (req,res) => {
-    if(!req.body.building || !req.body.boiler ||
-        !req.body.technician || !req.body.start_timestamp ||
-        !req.body.end_timestamp || !req.body.monthly_hours ||
-        !req.body.maintainceType) {
-
+    const emptyAttribute = !req.body.building || !req.body.boiler ||
+                        !req.body.technician || !req.body.start_timestamp ||
+                        !req.body.end_timestamp || !req.body.monthly_hours ||
+                        !req.body.maintainceType;
+    if(emptyAttribute) {
             res.status(400).send ({msg: "Content can not be empty"});
             return;
     }
@@ -24,7 +24,7 @@ exports.create = (req,res) => {
     appointment
         .save(appointment)
         .then(data => {
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch (err => {
             res.status(500).send ({
@@ -37,7 +37,7 @@ exports.create = (req,res) => {
 exports.findAll = (req,res) => {
     appointments.find({})
         .then(data => {
-            res.send(data);
+            res.status(200).send(data);
         })
         .catch(err => {
             res.status(500).send ({
@@ -47,12 +47,12 @@ exports.findAll = (req,res) => {
 };
 
 exports.update = (req,res) => {
+    const emptyAttribute = !req.body.building || !req.body.boiler ||
+                        !req.body.technician || !req.body.start_timestamp ||
+                        !req.body.end_timestamp || !req.body.monthly_hours ||
+                        !req.body.maintainceType;
     // Validation
-    if(!req.body.building || !req.body.boiler ||
-        !req.body.technician || !req.body.start_timestamp ||
-        !req.body.end_timestamp || !req.body.monthly_hours ||
-        !req.body.maintainceType) {
-            
+    if(emptyAttribute) {
             res.status(400).send ({msg: "Content can not be empty"});
             return;
     }
@@ -63,7 +63,7 @@ exports.update = (req,res) => {
                     message: `Cannot update the appointment with id=${req.params.id}. Maybe appointment was not found`
                 });
             }
-            res.send ({ message: "Appointment was updated successfully"});
+            res.status(200).send ({ message: "Appointment was updated successfully"});
         })
         .catch (err => {
             res.status(500).send ({
@@ -81,7 +81,7 @@ exports.findById = (req,res) => {
                   message: `Appointment with id ${req.params.id} was not found`
                 })
             }
-            res.send(data)
+            res.status(200).send(data)
         })
         .catch(err => {
             res.status(500).send ({
@@ -99,7 +99,7 @@ exports.delete = (req, res) => {
                     message: `Cannot delete appointment witch id ${req.params.id}. Maybe appointmnet was not found`
                 })
             }
-            res.send({message: "Appointment was deleted successfully."});  
+            res.status(200).send({message: "Appointment was deleted successfully."});  
         })
         .catch (err => {
             res.status(500).send ({
@@ -117,7 +117,7 @@ exports.findByAttribute = (req, res) => {
                     msg: "There is not any appointment with requested techinician"
                 })
             }
-            res.send (data);
+            res.status(200).send (data);
         })
         .catch (err => {
             res.status(500).send ({
