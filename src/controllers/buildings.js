@@ -12,7 +12,7 @@ exports.create = (req, res) => {
     //Create a new building
     const building = new buildings({
         adress: req.body.adress,
-        boilers: req.body.boilers,
+        buildings: req.body.buildings,
         companyId: req.body.companyId,
         fullname: req.body.fullname,
         phone: req.body.phone,
@@ -80,4 +80,46 @@ exports.delete = (req, res) => {
             message: "Error removing building with id:" + id
         });
     });
+};
+
+// Update a Building by Id
+exports.update = (req, res) => {
+    // Validate request
+    if(!req.body.adress || !req.body.boliers || !req.body.companyId || !req.body.fullname || !req.body.phone) {
+        res.status(400).send({ message: "Content can not be empty!" });
+      return;
+    }
+  
+    buildings.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })
+        .then(data => {
+            if (!data) {
+                res.status(404).send({
+                    message: `There is no building with id=${req.params.id}`
+                });
+            }
+            res.send({ message: "Building updated successfully." });
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Error updating building with id=" + id
+            });
+        });
+};
+
+// Get all Buildings with a specific attribute (CompanyId)
+exports.find = (req, res) => {
+    buildings.find( {companyId: req.params.companyId})
+        .then(data => {
+            if (data.length < 1) {
+                return res.status(404).send({
+                  message: `Company with id ${req.params.companyId} was not found`
+                })
+            }
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: "Some error occurred while getting all buildings from the Company." 
+            })
+        }) 
 };
