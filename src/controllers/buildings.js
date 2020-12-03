@@ -2,7 +2,7 @@ const buildings = require("../models/buildings");
 
 // Add a new Building
 exports.create = (req, res) => {
-    const validateBuilding = !req.body.adress || !req.body.boilers || !req.body.companyId || !req.body.fullname || !req.body.phone
+    const validateBuilding = !req.body.adress || !req.body.boilers || !req.body.companyId || !req.body.fullname || !req.body.phone;
     if(validateBuilding) {
         res.status(400).send ({msg: "Content can not be empty"});
         return;
@@ -65,7 +65,7 @@ exports.findById = (req,res) => {
 // Delete a Building by Id
 exports.delete = (req, res) => {
     const id = req.params.id;
-    buildings.findOneAndRemove({id}, {useFindAndModify: false})
+    buildings.findOneAndRemove(req.params.id, {useFindAndModify: false})
     .then (data => {
         if (!data) {
             return res.status(404).send ({
