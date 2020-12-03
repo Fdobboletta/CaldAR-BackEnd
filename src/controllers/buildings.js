@@ -2,7 +2,7 @@ const buildings = require("../models/buildings");
 
 // Add a new Building
 exports.create = (req, res) => {
-    const validateBuilding = !req.body.adress || !req.body.boilers || !req.body.companyId || !req.body.fullname || !req.body.phone;
+    const validateBuilding = !req.body.address || !req.body.boilers || !req.body.companyId || !req.body.fullname || !req.body.phone;
     if(validateBuilding) {
         res.status(400).send ({msg: "Content can not be empty"});
         return;
@@ -10,7 +10,7 @@ exports.create = (req, res) => {
 
     // Create a new building
     const building = new buildings({
-        adress: req.body.adress,
+        address: req.body.address,
         boilers: req.body.boilers,
         companyId: req.body.companyId,
         fullname: req.body.fullname,
@@ -83,7 +83,7 @@ exports.delete = (req, res) => {
 
 // Update a Building by Id
 exports.update = (req, res) => {
-    const validateBuilding = !req.body.adress || !req.body.boilers || !req.body.companyId || !req.body.fullname || !req.body.phone;
+    const validateBuilding = !req.body.address || !req.body.boilers || !req.body.companyId || !req.body.fullname || !req.body.phone;
     if(validateBuilding) {
         res.status(400).send({ message: "Content can not be empty!" });
       return;

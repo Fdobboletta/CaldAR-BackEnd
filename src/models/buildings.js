@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const buildingsSchema = mongoose.Schema(
     {
-        adress:{
+        address:{
             type: String,
             required: true,
         },
