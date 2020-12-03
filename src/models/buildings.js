@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const buildingsSchema = new Schema(
+const buildingsSchema = mongoose.Schema(
     {
         adress:{
             type: String,
@@ -29,4 +29,5 @@ const buildingsSchema = new Schema(
         }
     }
 )
+
 module.exports = mongoose.model('buildings', buildingsSchema);
