@@ -14,10 +14,6 @@ const CompanySchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        buildings: {
-            building:[],
-            type: String,
-        },
         fiscalAddress: {
             type: String,
             required: true,

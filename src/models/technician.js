@@ -3,13 +3,9 @@ const Schema = mongoose.Schema;
 
 const technicianSchema = new Schema(
     {
-        appointments: {
-            type: Number,
-            required: true,
-        },
         capabilities: {
-            type: Number,
-            required: true,  
+            type: Schema.Types.ObjectId,
+            ref: "BoilerTypes"
         },
         hour_rate: {
             type: Number,

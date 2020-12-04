@@ -5,18 +5,17 @@ const appointmentsSchema = new Schema (
     {
         building: {
             type: Schema.Types.ObjectId,
-            ref: "Building",
+            ref: "buildings",
             required: true,
         },
         boiler: {
             type: Schema.Types.ObjectId,
-            ref: "Boiler",
+            ref: "Boilers",
             required: true, 
         },
         technician: {
             type: Schema.Types.ObjectId,
-            ref: "id_user",
-            type: String,
+            ref: "Technicians",
             required: true,
         },
         start_timestamp: {

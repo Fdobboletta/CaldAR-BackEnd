@@ -4,7 +4,7 @@ const Technicians = require("../models/technician");
 exports.create = (req, res) => {
 
     //Validate Request
-    const emptyAttribute = !req.body.appointments || !req.body.capabilities || !req.body.hour_rate || !req.body.monthly_capacity || !req.body.phone || !req.body.birthdate || !req.body.firstName || !req.body.lastName;
+    const emptyAttribute = !req.body.capabilities || !req.body.hour_rate || !req.body.monthly_capacity || !req.body.phone || !req.body.birthdate || !req.body.firstName || !req.body.lastName;
 
     if (emptyAttribute) {
         res.status(400).send({ msg: "Content cannot be empty" });
@@ -13,7 +13,6 @@ exports.create = (req, res) => {
 
     //Create a new Technician
     const technician = new Technicians({
-        appointments: req.body.appointments,
         capabilities: req.body.capabilities,
         hour_rate: req.body.hour_rate,
         monthly_capacity: req.body.monthly_capacity,
@@ -39,7 +38,7 @@ exports.create = (req, res) => {
 // Update a Technician by Id
 exports.update = (req, res) => {
 
-    const emptyAttribute = !req.body.appointments || !req.body.capabilities || !req.body.hour_rate || !req.body.monthly_capacity || !req.body.phone || !req.body.birthdate || !req.body.firstName || !req.body.lastName;
+    const emptyAttribute = !req.body.capabilities || !req.body.hour_rate || !req.body.monthly_capacity || !req.body.phone || !req.body.birthdate || !req.body.firstName || !req.body.lastName;
 
     // Validate request
     if (emptyAttribute) {

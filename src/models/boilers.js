@@ -9,8 +9,13 @@ const boilersSchema = new Schema(
         },
         boilerType:{
             type: Schema.Types.ObjectId,
-            ref: "Type",
+            ref: "BoilerTypes",
             required: true,
+        },
+        building: {
+            type: Schema.Types.ObjectId,
+            ref: "buildings",
+            required: true
         },
         maintenance_period:{
             type: String,
