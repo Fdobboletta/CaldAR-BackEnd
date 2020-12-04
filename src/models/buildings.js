@@ -12,11 +12,10 @@ const buildingsSchema = mongoose.Schema(
             //ref:"id_boiler", 
             //required: false,
             type: String,
-            required: true,
-            
+            required: true       
         },
         companyId:{
-            type: String,
+            type: Schema.Types.ObjectId,
             required: true, 
         },
         fullname:{

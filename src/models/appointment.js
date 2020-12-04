@@ -4,20 +4,18 @@ const Schema = mongoose.Schema;
 const appointmentsSchema = new Schema (
     {
         building: {
-            // type: Schema.ObjectiId,
-            // ref: "id_building",
-            type: String,
+            type: Schema.Types.ObjectId,
+            ref: "Building",
             required: true,
         },
         boiler: {
-            // type: Schema.ObjectiId,
-            // ref: "id_boiler",
-            type: String,
+            type: Schema.Types.ObjectId,
+            ref: "Boiler",
             required: true, 
         },
         technician: {
-            // type: Schema.ObjectiId,
-            // ref: "id_user",
+            type: Schema.Types.ObjectId,
+            ref: "id_user",
             type: String,
             required: true,
         },

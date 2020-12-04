@@ -8,7 +8,8 @@ const boilersSchema = new Schema(
             required: true,
         },
         boilerType:{
-            type: String,
+            type: Schema.Types.ObjectId,
+            ref: "Type",
             required: true,
         },
         maintenance_period:{
