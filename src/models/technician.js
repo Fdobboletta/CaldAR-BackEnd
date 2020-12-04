@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const technicianSchema = new Schema(
     {
         capabilities: {
-            type: Schema.Types.ObjectId,
+            type: [Schema.Types.ObjectId],
             ref: "BoilerTypes"
         },
         hour_rate: {
