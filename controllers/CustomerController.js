@@ -52,8 +52,8 @@ app.get("/getCustomerByBuilding/:buildings", (req,res) => {
     }
 });
 
-//getCustomerByFiscalAdress
-app.get("/getCustomerByFiscalAdress/:fiscal_address", (req,res) => {
+//getCustomerByFiscalAddress
+app.get("/getCustomerByFiscalAddress/:fiscal_address", (req,res) => {
     const found = customers.some(customer =>
         customer.fiscal_address === String(req.params.fiscal_address));
     if (found) {

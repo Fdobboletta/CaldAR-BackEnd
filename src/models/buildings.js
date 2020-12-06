@@ -17,7 +17,7 @@ const buildingsSchema = mongoose.Schema(
         },
         companyId:{
             type: String,
-            required: true, 
+            required: false, 
         },
         fullname:{
             type: String,
@@ -25,7 +25,7 @@ const buildingsSchema = mongoose.Schema(
         },
         phone: {
             type: Number,
-            required: true,
+            required: false,
         }
     }
 )
