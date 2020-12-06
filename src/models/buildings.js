@@ -3,21 +3,12 @@ const Schema = mongoose.Schema;
 
 const buildingsSchema = mongoose.Schema(
     {
-        adress:{
+        address:{
             type: String,
             required: true,
-        },
-        boilers:{
-            //type:  Schema.ObjectId, 
-            //ref:"id_boiler", 
-            //required: false,
-            type: String,
-            required: true,
-            
         },
         companyId:{
-            type: String,
-            required: false, 
+            type: Schema.Types.ObjectId, 
         },
         fullname:{
             type: String,
@@ -25,7 +16,6 @@ const buildingsSchema = mongoose.Schema(
         },
         phone: {
             type: Number,
-            required: false,
         }
     }
 )

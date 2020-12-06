@@ -2,16 +2,28 @@ const buildings = require("../models/buildings");
 
 // Add a new Building
 exports.create = (req, res) => {
-    const validateBuilding = !req.body.adress || !req.body.boilers || !req.body.fullname;
-    if(validateBuilding) {
-        res.status(400).send ({msg: "Content can not be empty"});
+    const validateBuildingAddress = !req.body.address;
+    const validateBuildingName = !req.body.fullname;
+    const validateAddressAndName = !req.body.address && !req.body.fullname;
+    const validatePhone = String (req.body.phone).length; 
+    if(validateAddressAndName) {
+        res.status(400).send ({msg: "Buildings must have name and address, remember to enter both"});
+        return;
+    }else if(validateBuildingAddress) {
+        res.status(400).send ({msg: "Buildings must have adress, remember to enter one "});
+        return;
+    }else if(validateBuildingName) {
+        res.status(400).send ({msg: "Buildings must have name, remember to enter one"});
         return;
     }
-
+    if (validatePhone < 8 || validatePhone > 15){
+        res.status(400).send ({msg: "Phone number must have between 8 and 15 digits"});
+        return;
+    }
+    
     // Create a new building
     const building = new buildings({
-        adress: req.body.adress,
-        boilers: req.body.boilers,
+        address: req.body.address,
         companyId: req.body.companyId,
         fullname: req.body.fullname,
         phone: req.body.phone,
@@ -83,10 +95,23 @@ exports.delete = (req, res) => {
 
 // Update a Building by Id
 exports.update = (req, res) => {
-    const validateBuilding = !req.body.adress || !req.body.boilers || !req.body.fullname;
-    if(validateBuilding) {
-        res.status(400).send({ message: "Content can not be empty!" });
-      return;
+    const validateBuildingAddress = !req.body.address;
+    const validateBuildingName = !req.body.fullname;
+    const validateAddressAndName = !req.body.address && !req.body.fullname;
+    const validatePhone = String (req.body.phone).length;
+    if(validateAddressAndName) {
+        res.status(400).send ({msg: "Buildings must have name and address, remember to enter both"});
+        return;
+    }else if(validateBuildingAddress) {
+        res.status(400).send ({msg: "Buildings must have adress, remember to enter one"});
+        return;
+    }else if(validateBuildingName) {
+        res.status(400).send ({msg: "Buildings must have name, remember to enter one"});
+        return;
+    }
+    if (validatePhone < 8 || validatePhone > 15){
+        res.status(400).send ({msg: "Phone number must have between 8 and 15 digits"});
+        return;
     }
   
     buildings.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })
