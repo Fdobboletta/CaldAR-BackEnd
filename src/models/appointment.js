@@ -4,21 +4,18 @@ const Schema = mongoose.Schema;
 const appointmentsSchema = new Schema (
     {
         building: {
-            // type: Schema.ObjectiId,
-            // ref: "id_building",
-            type: String,
+            type: Schema.Types.ObjectId,
+            ref: "buildings",
             required: true,
         },
         boiler: {
-            // type: Schema.ObjectiId,
-            // ref: "id_boiler",
-            type: String,
+            type: Schema.Types.ObjectId,
+            ref: "Boilers",
             required: true, 
         },
         technician: {
-            // type: Schema.ObjectiId,
-            // ref: "id_user",
-            type: String,
+            type: Schema.Types.ObjectId,
+            ref: "Technicians",
             required: true,
         },
         start_timestamp: {
@@ -27,15 +24,12 @@ const appointmentsSchema = new Schema (
         },
         end_timestamp: {
             type: Date,
-            required: true,
         },
         monthly_hours: {
             type: Number,
-            required: true,
         },
         maintainceType: {
             type: String,
-            required: true,
         }
 
     }

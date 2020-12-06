@@ -2,14 +2,19 @@ const appointments = require ("../models/appointment.js");
 
 //Add new appointment
 exports.create = (req,res) => {
-    const emptyAttribute = !req.body.building || !req.body.boiler ||
-                        !req.body.technician || !req.body.start_timestamp ||
-                        !req.body.end_timestamp || !req.body.monthly_hours ||
-                        !req.body.maintainceType;
-    if(emptyAttribute) {
-            res.status(400).send ({msg: "Content can not be empty"});
+    if(!req.body.building) {
+            res.status(400).send ({msg: "Building is required. Please, enter a building id"});
             return;
-    }
+        } else if(!req.body.boiler) {
+                res.status(400).send ({msg: "Boiler identification is required. Please, enter a boiler id"});
+                return; 
+        } else if(!req.body.technician) {
+                res.status(400).send ({msg: "Technician's name is required. Please, enter a name"});
+                return; 
+        } else if(!req.body.start_timestamp) {
+                res.status(400).send ({msg: "Start time is required. Please, enter a start time"});
+                return;
+        }
     //Create a new appointment
     const appointment = new appointments ({
         building: req.body.building,
@@ -20,6 +25,7 @@ exports.create = (req,res) => {
         monthly_hours: req.body.monthly_hours,
         maintainceType: req.body.maintainceType,
     });
+
     //Save appointment in the DB
     appointment
         .save(appointment)
@@ -47,13 +53,17 @@ exports.findAll = (req,res) => {
 };
 
 exports.update = (req,res) => {
-    const emptyAttribute = !req.body.building || !req.body.boiler ||
-                        !req.body.technician || !req.body.start_timestamp ||
-                        !req.body.end_timestamp || !req.body.monthly_hours ||
-                        !req.body.maintainceType;
-    // Validation
-    if(emptyAttribute) {
-            res.status(400).send ({msg: "Content can not be empty"});
+    if(!req.body.building) {
+        res.status(400).send ({msg: "Building is required. Please, enter a building id"});
+        return;
+    } else if(!req.body.boiler) {
+            res.status(400).send ({msg: "Boiler identification is required. Please, enter a boiler id"});
+            return; 
+    } else if(!req.body.technician) {
+            res.status(400).send ({msg: "Technician's name is required. Please, enter a name"});
+            return; 
+    } else if(!req.body.start_timestamp) {
+            res.status(400).send ({msg: "Start time is required. Please, enter a start time"});
             return;
     }
     appointments.findByIdAndUpdate(req.params.id, req.body, {useFindAndModify: false})
