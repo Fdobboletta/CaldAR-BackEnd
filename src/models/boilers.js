@@ -5,7 +5,7 @@ const boilersSchema = new Schema(
     {
         description:{
             type: String,
-            required: true,
+            required: false,
         },
         boilerType:{
             type: Schema.Types.ObjectId,
@@ -19,15 +19,15 @@ const boilersSchema = new Schema(
         },
         maintenance_period:{
             type: String,
-            required: true, 
+            required: false, 
         },
         hour_maintenance_cost:{
             type: Number,
-            required: true,
+            required: false,
         },
         hour_eventual_cost: {
             type: Number,
-            required: true,
+            required: false,
         }
     }
 )

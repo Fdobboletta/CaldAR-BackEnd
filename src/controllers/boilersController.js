@@ -3,10 +3,10 @@ const boilers = require("../models/boilers");
 
 // Add a new Boiler
 exports.create = (req, res) => {
-    const emptyAttribute = !req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost
+    const emptyAttribute = !req.body.boilerType || !req.body.building;
     //Validate Request
     if(emptyAttribute) {
-        res.status(400).send ({msg: "Content can not be empty"});
+        res.status(400).send ({msg: "Boiler type and/or building can not be empty"});
         return;
     }
 
@@ -14,6 +14,7 @@ exports.create = (req, res) => {
     const boiler = new boilers({
         description: req.body.description,
         boilerType: req.body.boilerType,
+        building: req.body.building,
         maintenance_period: req.body.maintenance_period,
         hour_maintenance_cost: req.body.hour_maintenance_cost,
         hour_eventual_cost: req.body.hour_eventual_cost,
@@ -85,7 +86,7 @@ exports.delete = (req, res) => {
 
 // Update a Boiler by the Id in the request
 exports.update = (req, res) => {
-    const emptyAttribute = !req.body.description || !req.body.boilerType || !req.body.maintenance_period || !req.body.hour_maintenance_cost || !req.body.hour_eventual_cost
+    const emptyAttribute = !req.body.boilerType || !req.body.building;
     // Validate request
     if(emptyAttribute) {
         res.status(400).send({ message: "Content can not be empty!" });
