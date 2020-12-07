@@ -1,5 +1,7 @@
 const Boilers = require("../models/boilers");
 const boilers = require("../models/boilers");
+const BoilerTypes = require("../models/boilerTypes");
+const buildings = require("../models/buildings");
 
 // Add a new Boiler
 exports.create = (req, res) => {
@@ -73,9 +75,12 @@ exports.delete = (req, res) => {
                     message: `Cannot delete Boiler with id ${req.params.id}. Maybe Boiler was not found.`
                 })
             } 
+            buildings.find({_id: this._id}).remove();
+            BoilerTypes.find({_id: this._id}).remove();  
+            data.remove();
             res.status(200).send ({
                 message: "Boiler was deleted successfully."
-            });  
+            });
         })
         .catch(err => {
             res.status(500).send ({
@@ -89,7 +94,7 @@ exports.update = (req, res) => {
     const emptyAttribute = !req.body.boilerType || !req.body.building;
     // Validate request
     if(emptyAttribute) {
-        res.status(400).send({ message: "Content can not be empty!" });
+        res.status(400).send({ message: "Boiler type and/or building can not be empty" });
       return;
     }
   
