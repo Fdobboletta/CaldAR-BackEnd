@@ -8,15 +8,15 @@ router.post("/", technicians.create);
 router.put("/:id", technicians.update);
 
 // Delete a Technician
-router.delete("/:id", technicians.delete)
+router.delete("/:id", technicians.delete);
 
 // Get all Technicians
-router.get("/", technicians.findAll)
+router.get("/", technicians.findAll);
 
 // Get Technician by Id
-router.get("/:id", technicians.findById)
+router.get("/:id", technicians.findById);
 
 // Get all Technicians with a specific attribute
-router.get("/attribute/:firstName", technicians.findByAttribute)
+router.get("/attribute/:firstName", technicians.findByAttribute);
 
 module.exports = router;

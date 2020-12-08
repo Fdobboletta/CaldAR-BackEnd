@@ -1,4 +1,4 @@
-const appointments = require ("../controllers/appointmentsController");
+const appointments = require("../controllers/appointmentsController");
 const router = require("express").Router();
 
 //Add new appointment
