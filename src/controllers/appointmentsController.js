@@ -25,7 +25,6 @@ exports.create = (req,res) => {
         monthly_hours: req.body.monthly_hours,
         maintainceType: req.body.maintainceType,
     });
-
     //Save appointment in the DB
     appointment
         .save(appointment)
@@ -135,4 +134,3 @@ exports.findByAttribute = (req, res) => {
             });
         });
 };
-
