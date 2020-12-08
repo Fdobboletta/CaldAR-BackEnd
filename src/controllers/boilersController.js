@@ -8,11 +8,6 @@ exports.create = (req, res) => {
     const emptyBuilding = req.body.building;
     
     //Validate Request
-    if(!emptyBuilding && !emptyBoilerType) {
-        res.status(400).send ({msg: "Required content can not be empty"});
-        return;
-    } 
-
     if (!emptyBoilerType) {
         res.status(400).send ({msg: "Boiler type can not be empty"});
         return;
