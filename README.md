@@ -9,8 +9,7 @@ BE: Express
 **Prettier**
 
 *To format all files with Prettier:*
-# npx prettier --write .
-
+npx prettier --write .
 *To only check that files are already formatted:*
-# npx prettier --check .
+npx prettier --check .
 
