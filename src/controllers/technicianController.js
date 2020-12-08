@@ -2,35 +2,35 @@ const Technicians = require("../models/technician");
 
 // Add a new Technician
 exports.create = (req, res) => {
+  const capabilities = req.body.capabilities;
+  const hour_rate = req.body.hour_rate;
+  const phone = req.body.phone;
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
+
   //Validate Request
-  if(!req.body.capabilities) {
+  if(!capabilities) {
     res.status(400).send ({msg: "Capabilities are required. Enter a capabilitie type."});
     return;
-  } else if(!req.body.hour_rate) {
+  }  
+  
+  if(!hour_rate) {
     res.status(400).send ({msg: "Hour rate is required."});
-    return; 
-  } else if(!req.body.phone) {
+    return;   
+  } 
+  
+  if(!phone) {
     res.status(400).send ({msg: "Phone number is required."});
     return; 
-  } else if(!req.body.firstName) {
+  }
+  
+  if(!firstName) {
     res.status(400).send ({msg: "First name is required."});
     return;
-  } else if(!req.body.lastName) {
-    res.status(400).send ({msg: "Last name is required."});
-    return;
   }
-
-  const emptyAttribute =
-    !req.body.capabilities ||
-    !req.body.hour_rate ||
-    !req.body.monthly_capacity ||
-    !req.body.phone ||
-    !req.body.birthdate ||
-    !req.body.firstName ||
-    !req.body.lastName;
-
-  if (emptyAttribute) {
-    res.status(400).send({ msg: "Content cannot be empty" });
+  
+  if(!lastName) {
+    res.status(400).send ({msg: "Last name is required."});
     return;
   }
 
@@ -61,18 +61,35 @@ exports.create = (req, res) => {
 
 // Update a Technician by Id
 exports.update = (req, res) => {
-  const emptyAttribute =
-    !req.body.capabilities ||
-    !req.body.hour_rate ||
-    !req.body.monthly_capacity ||
-    !req.body.phone ||
-    !req.body.birthdate ||
-    !req.body.firstName ||
-    !req.body.lastName;
+  const capabilities = req.body.capabilities;
+  const hour_rate = req.body.hour_rate;
+  const phone = req.body.phone;
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
 
   // Validate request
-  if (emptyAttribute) {
-    res.status(400).send({ message: "Content cannot be empty" });
+  if(!capabilities) {
+    res.status(400).send ({msg: "Capabilities are required. Enter a capabilitie type."});
+    return;
+  }  
+  
+  if(!hour_rate) {
+    res.status(400).send ({msg: "Hour rate is required."});
+    return;   
+  } 
+  
+  if(!phone) {
+    res.status(400).send ({msg: "Phone number is required."});
+    return; 
+  }
+  
+  if(!firstName) {
+    res.status(400).send ({msg: "First name is required."});
+    return;
+  }
+
+  if(!lastName) {
+    res.status(400).send ({msg: "Last name is required."});
     return;
   }
 
