@@ -113,7 +113,6 @@ exports.findByAttr = (req, res) => {
 exports.update = (req, res) => {
     const emptyParams = !req.body.companyName || !req.body.cuit || !req.body.email || !req.body.fiscalAddress;
     // Validate request
-    const emptyParams = !req.body.companyName || !req.body.cuit || !req.body.email || !req.body.fiscalAddress;
     
     if(emptyParams){
         res.status(400).json({msg: `Content can not be empty.`});
