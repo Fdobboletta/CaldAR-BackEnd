@@ -1,14 +1,25 @@
+const Appointments = require("../models/appointment");
 const Boilers = require("../models/boilers");
 const boilers = require("../models/boilers");
-const BoilerTypes = require("../models/boilerTypes");
-const buildings = require("../models/buildings");
 
 // Add a new Boiler
 exports.create = (req, res) => {
-    const emptyAttribute = !req.body.boilerType || !req.body.building;
+    const emptyBoilerType = req.body.boilerType;
+    const emptyBuilding = req.body.building;
+    
     //Validate Request
-    if(emptyAttribute) {
-        res.status(400).send ({msg: "Boiler type and/or building can not be empty"});
+    if(!emptyBuilding && !emptyBoilerType) {
+        res.status(400).send ({msg: "Required content can not be empty"});
+        return;
+    } 
+
+    if (!emptyBoilerType) {
+        res.status(400).send ({msg: "Boiler type can not be empty"});
+        return;
+    } 
+
+    if(!emptyBuilding) {
+        res.status(400).send ({msg: "Building id can not be empty"});
         return;
     }
 
@@ -74,13 +85,12 @@ exports.delete = (req, res) => {
                 return res.status(404).send ({
                     message: `Cannot delete Boiler with id ${req.params.id}. Maybe Boiler was not found.`
                 })
-            } 
-            buildings.find({_id: this._id}).remove();
-            BoilerTypes.find({_id: this._id}).remove();  
-            data.remove();
-            res.status(200).send ({
-                message: "Boiler was deleted successfully."
-            });
+            }
+            Appointments.deleteMany({boiler:req.params.id}).then(function(){
+                res.status(200).send ({
+                    message: "Boiler was deleted successfully."
+                })
+            })
         })
         .catch(err => {
             res.status(500).send ({
@@ -91,11 +101,23 @@ exports.delete = (req, res) => {
 
 // Update a Boiler by the Id in the request
 exports.update = (req, res) => {
-    const emptyAttribute = !req.body.boilerType || !req.body.building;
+    const emptyBoilerType = req.body.boilerType;
+    const emptyBuilding = req.body.building;
+    
     // Validate request
-    if(emptyAttribute) {
-        res.status(400).send({ message: "Boiler type and/or building can not be empty" });
-      return;
+    if(!emptyBuilding && !emptyBoilerType) {
+        res.status(400).send ({msg: "Required content can not be empty"});
+        return;
+    } 
+
+    if (!emptyBoilerType) {
+        res.status(400).send ({msg: "Boiler type can not be empty"});
+        return;
+    } 
+
+    if(!emptyBuilding) {
+        res.status(400).send ({msg: "Building id can not be empty"});
+        return;
     }
   
     Boilers.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })

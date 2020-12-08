@@ -12,7 +12,7 @@ const boilersSchema = new Schema(
             ref: "BoilerTypes",
             required: true,
         },
-        building: {
+        building:{
             type: Schema.Types.ObjectId,
             ref: "buildings",
             required: true
