@@ -1,5 +1,6 @@
 const Boilers = require('../models/boilers');
 const BoilerTypes = require('../models/BoilerTypes');
+const Technicians = require('../models/technician');
  
 // Add a new BoilerType
 exports.create = (req, res) => {
@@ -17,7 +18,6 @@ exports.create = (req, res) => {
     //Save BoilerType in the database
     boilerType.save(boilerType)
         .then(data => {
-            console.log(data);
             res.send(data);
             res.status(200);
         })
@@ -91,26 +91,24 @@ exports.update = (req, res) => {
     return;
   }
 
-  BoilerTypes.findByIdAndUpdate(req.params.id, req.body, {
-    useFindAndModify: false,
-  })
-    .then((data) => {
-      if (!data) {
-        return res.status(404).send({
-          message: `Cannot update Boiler Type with id=${req.params.id}. Maybe Type was not found!`,
-        });
-      }
-      res.send(data);
-      console.log(data);
-      res.status(200);
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the boiler.",
-      });
-    });
-};
+    BoilerTypes.findByIdAndUpdate(req.params.id, req.body , { useFindAndModify: false })
+        .then(data => {
+            if (!data) {
+                return res.status(404).send({
+                    message: `Cannot update Boiler Type with id=${req.params.id}. Maybe Type was not found!`
+                });
+            }
+            res.send(data);
+            res.status(200);
+        })
+        .catch((err => { 
+            res.status(500).send({
+                message:
+                err.message || "Some error occurred while creating the boiler."
+            });
+        }))
+
+}
 
 // Delete a BoilerType with an specified Id in the request
 exports.delete = (req, res) => {
@@ -130,6 +128,14 @@ exports.delete = (req, res) => {
             Boilers.deleteMany({boilerType: req.params.id}).then(function(){
                 res.status(200).send ({
                     message: "Boiler Type was deleted successfully."
+                })
+            })
+            Technicians.update(
+                {},
+                { $pull: {BoilerTypes: req.params.id}}
+            ).then (function(){
+                res.status(200).send ({
+                    message: "Boiler Type was deleted successfully from technicians."
                 })
             })
         })
