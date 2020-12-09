@@ -19,16 +19,6 @@
         "mongoose": "^5.10.16"
     },
     "devDependencies": {
-        "husky": "^5.0.4",
         "nodemon": "^2.0.6"
-    },
-    "husky": {
-        "hooks": {
-          "pre-commit": "lint-staged"
-        }
-    },
-      "lint-staged": {
-        "*.js": "eslint --cache --fix",
-        "*.{js,css,md}": "prettier --write"
     }
 }
