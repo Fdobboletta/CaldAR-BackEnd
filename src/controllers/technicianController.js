@@ -1,4 +1,5 @@
 const Technicians = require("../models/technician");
+const Appointments = require("../models/appointment");
 
 // Add a new Technician
 exports.create = (req, res) => {
@@ -131,6 +132,23 @@ exports.delete = (req, res) => {
         message: "Error removing Technician with id " + req.params.id,
       });
     });
+
+  Appointments.findByIdAndRemove(req.params.id, { useFindAndModify: false })
+    .then((data) => {
+      if (!data) {
+        return res.status(404).send({
+          message: `Cannot delete Appointment with id ${req.params.id}. Maybe the appointment was not found.`,
+        });
+      }
+      res.status(200).send({
+        message: "Appointment was deleted successfully.",
+      });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Error removing the appointment with id " + req.params.id,
+      });
+    });  
 };
 
 // Get all Technicians
