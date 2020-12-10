@@ -24,15 +24,12 @@ const appointmentsSchema = new Schema (
         },
         end_timestamp: {
             type: Date,
-            required: true,
         },
         monthly_hours: {
             type: Number,
-            required: true,
         },
         maintainceType: {
             type: String,
-            required: true,
         }
 
     }
