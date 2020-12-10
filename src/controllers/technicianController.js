@@ -94,9 +94,7 @@ exports.update = (req, res) => {
     return;
   }
 
-  Technicians.findByIdAndUpdate(req.params.id, req.body, {
-    useFindAndModify: false,
-  })
+  Technicians.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })
     .then((data) => {
       if (!data) {
         res.status(404).send({
@@ -123,32 +121,17 @@ exports.delete = (req, res) => {
           message: `Cannot delete Technician with id ${req.params.id}. Maybe Technician was not found.`,
         });
       }
-      res.status(200).send({
-        message: "Technician was deleted successfully.",
-      });
+      Appointments.deleteMany({ technician: req.params.id }).then(() => {
+        res.status(200).send({
+          message: "Technician was deleted successfully.",
+        })
+      })
     })
     .catch((err) => {
       res.status(500).send({
-        message: "Error removing Technician with id " + req.params.id,
+        message: `Error removing Technician with id ${req.params.id}.`
       });
     });
-
-  Appointments.findByIdAndRemove(req.params.id, { useFindAndModify: false })
-    .then((data) => {
-      if (!data) {
-        return res.status(404).send({
-          message: `Cannot delete Appointment with id ${req.params.id}. Maybe the appointment was not found.`,
-        });
-      }
-      res.status(200).send({
-        message: "Appointment was deleted successfully.",
-      });
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: "Error removing the appointment with id " + req.params.id,
-      });
-    });  
 };
 
 // Get all Technicians
@@ -172,7 +155,7 @@ exports.findById = (req, res) => {
     .then((data) => {
       if (!data) {
         return res.status(404).send({
-          message: `Technician with id ${req.params.id} was not found`,
+          message: `Technician with id ${req.params.id} was not found.`,
         });
       }
       res.status(200).send(data);
@@ -191,7 +174,7 @@ exports.findByAttribute = (req, res) => {
     .then((data) => {
       if (!data) {
         return res.status(404).send({
-          message: `Technician with first name ${req.params.firstName} was not found`,
+          message: `Technician with first name ${req.params.firstName} was not found.`,
         });
       }
       res.status(200).send(data);
