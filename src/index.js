@@ -1,6 +1,7 @@
 const express = require('express');
 const router = require('./routes');
 const mongoose = require('mongoose');
+const process = require('process');
 const PORT = process.env.PORT || 4000;
 const app = express();
 const bodyParser = require('body-parser');
@@ -20,7 +21,7 @@ mongoose
     .then(()=> {
     console.log('DB Connected')
     app.listen({port:PORT}, ()=> {
-        console.log('Server running on port 4000');
+        console.log(`Server running on port ${PORT} `);
     });
 });
 
