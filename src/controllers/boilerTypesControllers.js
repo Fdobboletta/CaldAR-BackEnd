@@ -125,18 +125,17 @@ exports.delete = (req, res) => {
                     message: `Cannot update Boiler Type with id=${req.params.id}. Maybe Type was not found!`
                 });
             }
-            Boilers.deleteMany({boilerType: req.params.id}).then(function(){
-                res.status(200).send ({
-                    message: "Boiler Type was deleted successfully."
-                })
+            Boilers.deleteMany(
+                {boilerType: req.params.id})
+                .then(function(){
             })
-            Technicians.update(
-                {},
-                { $pull: {BoilerTypes: req.params.id}}
+            Technicians.updateMany(
+                { capabilities: req.params.id},
+                { $pull: {capabilities: req.params.id}}
             ).then (function(){
-                res.status(200).send ({
-                    message: "Boiler Type was deleted successfully from technicians."
-                })
+            })
+            res.status(200).send ({
+                message: "Boiler Type was deleted successfully from technicians and boilers."
             })
         })
         .catch((err => { 
