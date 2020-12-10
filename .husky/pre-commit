@@ -1,5 +1,4 @@
 #!/bin/sh
 . "$(dirname $0)/_/husky.sh"
-# --> we need to add this when lint and prettier are ready
-# npm run lint
-# npm run prettier
+npm run prettier
+npm run lint
