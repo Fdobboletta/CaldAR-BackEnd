@@ -1,25 +1,30 @@
 {
-    "name": "caldar-backend",
-    "version": "1.0.0",
-    "description": "BE of the administration app",
-    "main": "index.js",
-    "scripts": {
-        "test": "npm test",
-        "start": "node src/index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "(https://github.com/svillav/CaldAR-BackEnd.git)"
-    },
-    "author": "bsd M1",
-    "license": "ISC",
-    "dependencies": {
-        "body-parser": "^1.19.0",
-        "express": "^4.17.1",
-        "mongoose": "^5.10.16"
-    },
-    "devDependencies": {
-        "husky": "^5.0.4",
-        "nodemon": "^2.0.6"
-    }
+  "name": "caldar-backend",
+  "version": "1.0.0",
+  "description": "BE of the administration app",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node src/index.js",
+    "lint": "eslint .",
+    "prettier": "prettier --write .",
+    "postinstall": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/svillav/CaldAR-BackEnd.git)"
+  },
+  "author": "bsd M1",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.16"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "husky": "^5.0.4",
+    "nodemon": "^2.0.6",
+    "prettier": "2.2.1"
+  }
 }
