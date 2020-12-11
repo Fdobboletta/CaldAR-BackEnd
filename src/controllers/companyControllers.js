@@ -69,8 +69,8 @@ exports.findAll = (req, res) => {
 
 // Get Company by ID
 exports.findById = (req, res) => {
-    // Validate
-    const id = req.params.id;
+  // Validate
+  const id = req.params.id;
 
     if(!id){
         res.status(400).json({msg: `Content can not be empty.`});
@@ -107,7 +107,7 @@ exports.findByAttr = (req, res) => {
                 message: `Some error occurred while getting companies.` 
             });
         });
-};
+      }
 
 // Update existing Company selected by id
 exports.update = (req, res) => {
