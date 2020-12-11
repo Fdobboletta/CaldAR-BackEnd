@@ -5,18 +5,18 @@ const router = require("express").Router();
 router.post("/", boilers.create);
 
 // Get all Boilers
-router.get("/", boilers.findAll)
+router.get("/", boilers.findAll);
 
 // Get Boiler by Id
-router.get("/:id", boilers.findById)
+router.get("/:id", boilers.findById);
 
 // Delete a Boiler
-router.delete("/:id", boilers.delete)
+router.delete("/:id", boilers.delete);
 
 // Update a Boiler
-router.put("/:id", boilers.update)
+router.put("/:id", boilers.update);
 
 // Get all Boilers with a specific attribute
-router.get("/attribute/:boilerType", boilers.find)
+router.get("/attribute/:boilerType", boilers.find);
 
 module.exports = router;

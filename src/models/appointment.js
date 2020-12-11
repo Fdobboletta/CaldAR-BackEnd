@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const appointmentsSchema = new Schema (
@@ -24,15 +24,12 @@ const appointmentsSchema = new Schema (
         },
         end_timestamp: {
             type: Date,
-            required: true,
         },
         monthly_hours: {
             type: Number,
-            required: true,
         },
         maintainceType: {
             type: String,
-            required: true,
         }
 
     }
