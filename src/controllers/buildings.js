@@ -9,13 +9,16 @@ exports.create = (req, res) => {
     if(validateAddressAndName) {
         res.status(400).send ({msg: "Buildings must have name and address, remember to enter both"});
         return;
+        
     }else if(validateBuildingAddress) {
         res.status(400).send ({msg: "Buildings must have adress, remember to enter one "});
         return;
+
     }else if(validateBuildingName) {
         res.status(400).send ({msg: "Buildings must have name, remember to enter one"});
         return;
     }
+
     if (validatePhone < 8 || validatePhone > 15){
         res.status(400).send ({msg: "Phone number must have between 8 and 15 digits"});
         return;
@@ -84,7 +87,11 @@ exports.delete = (req, res) => {
                 message: `There is no building with Id: ${req.params.id}`
             })
         }
-        res.status(200).send({message: "Building was deleted successfully."})    
+        Boilers.deleteMany(
+            {building: req.params.id})
+            .then(function(){
+                res.status(200).send({message: "Building was deleted successfully."})    
+            })     
     })
     .catch(err => {
         res.status(500).send ({
