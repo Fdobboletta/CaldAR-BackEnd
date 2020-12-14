@@ -1,19 +1,37 @@
 const Technicians = require("../models/technician");
+const Appointments = require("../models/appointment");
 
 // Add a new Technician
 exports.create = (req, res) => {
-  //Validate Request
-  const emptyAttribute =
-    !req.body.capabilities ||
-    !req.body.hour_rate ||
-    !req.body.monthly_capacity ||
-    !req.body.phone ||
-    !req.body.birthdate ||
-    !req.body.firstName ||
-    !req.body.lastName;
+  const capabilities = req.body.capabilities;
+  const hour_rate = req.body.hour_rate;
+  const phone = req.body.phone;
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
 
-  if (emptyAttribute) {
-    res.status(400).send({ msg: "Content cannot be empty" });
+  //Validate Request
+  if(!capabilities) {
+    res.status(400).send ({msg: "Capabilities are required. Enter a capabilitie type."});
+    return;
+  }  
+  
+  if(!hour_rate) {
+    res.status(400).send ({msg: "Hour rate is required."});
+    return;   
+  } 
+  
+  if(!phone) {
+    res.status(400).send ({msg: "Phone number is required."});
+    return; 
+  }
+  
+  if(!firstName) {
+    res.status(400).send ({msg: "First name is required."});
+    return;
+  }
+  
+  if(!lastName) {
+    res.status(400).send ({msg: "Last name is required."});
     return;
   }
 
@@ -32,7 +50,7 @@ exports.create = (req, res) => {
   technician
     .save(technician)
     .then((data) => {
-      res.send(data);
+      res.status(200).send(data);
     })
     .catch((err) => {
       res.status(500).send({
@@ -44,24 +62,39 @@ exports.create = (req, res) => {
 
 // Update a Technician by Id
 exports.update = (req, res) => {
-  const emptyAttribute =
-    !req.body.capabilities ||
-    !req.body.hour_rate ||
-    !req.body.monthly_capacity ||
-    !req.body.phone ||
-    !req.body.birthdate ||
-    !req.body.firstName ||
-    !req.body.lastName;
+  const capabilities = req.body.capabilities;
+  const hour_rate = req.body.hour_rate;
+  const phone = req.body.phone;
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
 
   // Validate request
-  if (emptyAttribute) {
-    res.status(400).send({ message: "Content cannot be empty" });
+  if(!capabilities) {
+    res.status(400).send ({msg: "Capabilities are required. Enter a capabilitie type."});
+    return;
+  }  
+  
+  if(!hour_rate) {
+    res.status(400).send ({msg: "Hour rate is required."});
+    return;   
+  } 
+  
+  if(!phone) {
+    res.status(400).send ({msg: "Phone number is required."});
+    return; 
+  }
+  
+  if(!firstName) {
+    res.status(400).send ({msg: "First name is required."});
     return;
   }
 
-  Technicians.findByIdAndUpdate(req.params.id, req.body, {
-    useFindAndModify: false,
-  })
+  if(!lastName) {
+    res.status(400).send ({msg: "Last name is required."});
+    return;
+  }
+
+  Technicians.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })
     .then((data) => {
       if (!data) {
         res.status(404).send({
@@ -88,13 +121,15 @@ exports.delete = (req, res) => {
           message: `Cannot delete Technician with id ${req.params.id}. Maybe Technician was not found.`,
         });
       }
-      res.status(200).send({
-        message: "Technician was deleted successfully.",
-      });
+      Appointments.deleteMany({ technician: req.params.id }).then(() => {
+        res.status(200).send({
+          message: "Technician was deleted successfully.",
+        })
+      })
     })
     .catch((err) => {
       res.status(500).send({
-        message: "Error removing Technician with id " + req.params.id,
+        message: `Error removing Technician with id ${req.params.id}.`
       });
     });
 };
@@ -120,7 +155,7 @@ exports.findById = (req, res) => {
     .then((data) => {
       if (!data) {
         return res.status(404).send({
-          message: `Technician with id ${req.params.id} was not found`,
+          message: `Technician with id ${req.params.id} was not found.`,
         });
       }
       res.status(200).send(data);
@@ -139,7 +174,7 @@ exports.findByAttribute = (req, res) => {
     .then((data) => {
       if (!data) {
         return res.status(404).send({
-          message: `Technician with first name ${req.params.firstName} was not found`,
+          message: `Technician with first name ${req.params.firstName} was not found.`,
         });
       }
       res.status(200).send(data);
