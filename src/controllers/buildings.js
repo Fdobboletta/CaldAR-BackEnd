@@ -32,50 +32,51 @@ exports.create = (req, res) => {
         phone: req.body.phone,
     });
 
-    // Save building in the database
-    building
-        .save(building)
-        .then(data => {
-            res.status(200).send(data);
-        })
-        .catch(err => { 
-            res.status(500).send({
-              message: "Some error occurred while creating the building."
-            });
-        });
+  // Save building in the database
+  building
+    .save(building)
+    .then((data) => {
+      res.status(200).send(data);
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Some error occurred while creating the building.",
+      });
+    });
 };
 
 // Get all buildings
 exports.findAll = (req, res) => {
-    buildings.find({})
-        .then(data => {
-            res.status(200).send(data);
-        })
-        .catch(err => {
-            res.status(500).send({
-                message: "Some error occurred while getting all buildings." 
-            })
-        }) 
-}
-
-// Get Building by ID
-exports.findById = (req,res) => {
-    buildings.findById(req.params.id)
-        .then(data => {
-            if (!data) {
-                return res.status(404).send({
-                  message: `building with id ${req.params.id} was not found`
-                })
-            }
-            res.status(200).send(data)
-        })
-        .catch(err => {
-            res.status(500).send ({
-                message: "Some error occurred while retrieving building."
-            });
-        });
+  buildings
+    .find({})
+    .then((data) => {
+      res.status(200).send(data);
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Some error occurred while getting all buildings.",
+      });
+    });
 };
 
+// Get Building by ID
+exports.findById = (req, res) => {
+  buildings
+    .findById(req.params.id)
+    .then((data) => {
+      if (!data) {
+        return res.status(404).send({
+          message: `building with id ${req.params.id} was not found`,
+        });
+      }
+      res.status(200).send(data);
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Some error occurred while retrieving building.",
+      });
+    });
+};
 
 // Delete a Building by Id
 exports.delete = (req, res) => {
@@ -97,6 +98,13 @@ exports.delete = (req, res) => {
         res.status(500).send ({
             message: "Error removing building with id:" + id
         });
+      }
+      res.status(200).send({ message: "Building was deleted successfully." });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: "Error removing building with id:" + id,
+      });
     });
 };
 
@@ -135,23 +143,32 @@ exports.update = (req, res) => {
                 message: "Error updating building with id=" + id
             });
         });
+      }
+      res.status(200).send({ message: "Building updated successfully." });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: `Error updating building with id: ${req.params.id}`
+      });
+    });
 };
 
 // Get all Buildings with a specific attribute (CompanyId)
 exports.findByAttribute = (req, res) => {
-    buildings.find( {companyId: req.params.companyId})
-        .then(data => {
-            if (data.length < 1) {
-                return res.status(404).send({
-                  message: `Company with id ${req.params.companyId} was not found`
-                })
-            }
-            res.status(200).send(data);
-        })
-        .catch(err => {
-            res.status(500).send({
-                message: "Some error occurred while getting all buildings from the Company." 
-            })
-        }) 
+  buildings
+    .find({ companyId: req.params.companyId })
+    .then((data) => {
+      if (data.length < 1) {
+        return res.status(404).send({
+          message: `Company with id ${req.params.companyId} was not found`,
+        });
+      }
+      res.status(200).send(data);
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message:
+          "Some error occurred while getting all buildings from the Company.",
+      });
+    });
 };
-
