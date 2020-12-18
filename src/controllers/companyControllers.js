@@ -1,4 +1,11 @@
-const Company = require('../models/Company');
+const Company = require(`../models/Company`);
+const Buildings = require(`../models/buildings`);
+
+const fullNamePatt = /[a-zA-Z]+\s[a-zA-Z]+/;
+const emailPatt = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const exclude = /\d/;
+const cuitPatt = /[0-9]{11}/;
+const fiscalAddressPatt =  /[a-zA-Z]{5,}\s\d+/;
 
 // Create new Company
 exports.create = (req, res) => {
@@ -6,10 +13,23 @@ exports.create = (req, res) => {
     const emptyParams = !req.body.companyName || !req.body.cuit || !req.body.email || !req.body.fiscalAddress;
     
     if(emptyParams){
-        res.status(400).json({msg: 'Content can not be empty.'});
+        res.status(400).json({msg: `Content can not be empty.`});
         return;
     }
     
+    if (fullNamePatt.test(req.body.companyName) === false || exclude.test(req.body.companyName) === true){
+        return res.status(400).json({msg: `Full name not valid, please use only letters`})
+    }    
+    if (emailPatt.test(req.body.email) === false){
+        return res.status(400).json({msg: `Email not valid`})
+    }
+    if (cuitPatt.test(req.body.cuit) === false){
+        return res.status(400).json({msg: `Cuit not valid`})
+    }
+    if (fiscalAddressPatt.test(req.body.fiscalAddress) === false){
+        return res.status(400).json({msg: `Address not valid`})
+    }
+
     // Create a new Company
     const company = new Company({
         companyName: req.body.companyName,
@@ -28,7 +48,7 @@ exports.create = (req, res) => {
         .catch((err => { 
             res.status(500).send({
               message:
-                err.message || "Some error occurred while creating the company."
+                err.message || `Some error occurred while creating the company.`
             });
         }))
 }
@@ -42,7 +62,7 @@ exports.findAll = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                   err.message || "Some error occurred while getting all Companies." 
+                   err.message || `Some error occurred while getting all Companies.` 
             })
         }) 
 }
@@ -53,20 +73,20 @@ exports.findById = (req, res) => {
     const id = req.params.id;
 
     if(!id){
-        res.status(400).json({msg: 'Content can not be empty.'});
+        res.status(400).json({msg: `Content can not be empty.`});
         return;  
     }
     Company.findById(id)
         .then(data => {
             if(!data){
-                return res.status(404).send({msg: 'Company Id not found'})
+                return res.status(404).send({msg: `Company Id not found`})
             }
             res.status(200).send(data);
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                   err.message || "Some error occurred while getting all Companies." 
+                   err.message || `Some error occurred while getting all Companies.` 
             })
         }) 
 }
@@ -84,7 +104,7 @@ exports.findByAttr = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: "Some error occurred while getting companies." 
+                message: `Some error occurred while getting companies.` 
             });
         });
 };
@@ -93,9 +113,23 @@ exports.findByAttr = (req, res) => {
 exports.update = (req, res) => {
     const emptyParams = !req.body.companyName || !req.body.cuit || !req.body.email || !req.body.fiscalAddress;
     // Validate request
+    
     if(emptyParams){
-        res.status(400).send({msg: 'Content can not be empty.'});
+        res.status(400).json({msg: `Content can not be empty.`});
         return;
+    }
+    //Validate each camp
+    if (fullNamePatt.test(req.body.companyName) === false || exclude.test(req.body.companyName) === true){
+        return res.status(400).json({msg: `Full name not valid, please use only letters`})
+    }    
+    if (emailPatt.test(req.body.email) === false){
+        return res.status(400).json({msg: `Email not valid`})
+    }
+    if (cuitPatt.test(req.body.cuit) === false){
+        return res.status(400).json({msg: `Cuit not valid`})
+    }
+    if (fiscalAddressPatt.test(req.body.fiscalAddress) === false){
+        return res.status(400).json({msg: `Address not valid`})
     }
 
     Company.findByIdAndUpdate(req.params.id, req.body , { useFindAndModify: false })
@@ -106,12 +140,12 @@ exports.update = (req, res) => {
                 });
             }
             res.status(200).send({
-                message: "Company was update successfully."
+                message: `Company was update successfully.`
             });
         })
         .catch((err => { 
             res.status(500).send({
-                message: "Error updating Company with id:" + req.params.id
+                message: `Error updating Company with id:` + req.params.id
             });
         }))
 };
@@ -122,16 +156,18 @@ exports.delete = (req, res) => {
         .then(data => {
             if (!data) {
                 return res.status(404).send({
-                    message: `Cannot delete Company with id=${req.params.id}. Maybe Company was not found!`
+                    message: `Cannot delete Company with id=${req.params.id}. Maybe Company was not found.`
                 });
-            }
+            }     
+        Buildings.deleteMany({companyId: req.params.id}).then(function(){
             res.status(200).send({
-                message: "Company was deleted successfully"
-            });
+                msg: `Company was deleted successfully`
+            })
         })
-        .catch(err => { 
-            res.status(500).send({
-                message: "Some error occurred while removing the Company with id:" + req.params.id
-            });
+    })
+    .catch(err => { 
+        res.status(500).send({
+            message: `Some error occurred while removing the Company with id:` + req.params.id
         });
-};
+    })
+}

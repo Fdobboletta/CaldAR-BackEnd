@@ -5,29 +5,29 @@ const boilersSchema = new Schema(
     {
         description:{
             type: String,
-            required: true,
+            required: false,
         },
         boilerType:{
             type: Schema.Types.ObjectId,
             ref: "BoilerTypes",
             required: true,
         },
-        building: {
+        building:{
             type: Schema.Types.ObjectId,
             ref: "buildings",
             required: true
         },
         maintenance_period:{
             type: String,
-            required: true, 
+            required: false, 
         },
         hour_maintenance_cost:{
             type: Number,
-            required: true,
+            required: false,
         },
         hour_eventual_cost: {
             type: Number,
-            required: true,
+            required: false,
         }
     }
 )
