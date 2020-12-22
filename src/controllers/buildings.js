@@ -94,13 +94,6 @@ exports.delete = (req, res) => {
                 res.status(200).send({message: "Building was deleted successfully."})    
             })     
     })
-    .catch(err => {
-        res.status(500).send ({
-            message: "Error removing building with id:" + id
-        });
-      }
-      res.status(200).send({ message: "Building was deleted successfully." });
-    })
     .catch((err) => {
       res.status(500).send({
         message: "Error removing building with id:" + id,
@@ -143,14 +136,6 @@ exports.update = (req, res) => {
                 message: "Error updating building with id=" + id
             });
         });
-      }
-      res.status(200).send({ message: "Building updated successfully." });
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: `Error updating building with id: ${req.params.id}`
-      });
-    });
 };
 
 // Get all Buildings with a specific attribute (CompanyId)
