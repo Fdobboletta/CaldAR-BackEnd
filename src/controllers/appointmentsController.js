@@ -41,9 +41,9 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
   appointments
     .find({})
-    .populate ('building')
-    .populate ('boiler')
-    .populate ('technician')
+    .populate("building")
+    .populate("boiler")
+    .populate("technician")
     .then((data) => {
       res.status(200).send(data);
     })
