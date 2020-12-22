@@ -104,7 +104,7 @@ exports.update = (req, res) => {
     })
     .catch((err) => {
       res.status(500).send({
-        message: `Error updating building with id: ${req.params.id}`
+        message: `Error updating building with id: ${req.params.id}`,
       });
     });
 };

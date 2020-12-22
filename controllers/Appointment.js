@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const process = require('process');
+const process = require("process");
 const PORT = process.env.PORT || 5000;
 const appointsData = require("../data/appointment.json");
 
