@@ -85,10 +85,10 @@ app.get("/getBoilerByHourMaintainceCost/:hour_maintaince_cost", (req, res) => {
 });
 
 //getBoilerByHourEventualCost
-app.get("/getBoilerByHourEventualCost/:hour_eventual_cost", (req, res) => {
+app.get("/getBoilerByHourEventualCost/:hourEventualCost", (req, res) => {
   const found = boilers.some(
     (boiler) =>
-      boiler.hour_eventual_cost === String(req.params.hour_eventual_cost)
+      boiler.hourEventualCost === String(req.params.hourEventualCost)
   );
   if (found) {
     res
@@ -96,12 +96,12 @@ app.get("/getBoilerByHourEventualCost/:hour_eventual_cost", (req, res) => {
       .json(
         boilers.filter(
           (boiler) =>
-            boiler.hour_eventual_cost === String(req.params.hour_eventual_cost)
+            boiler.hourEventualCost === String(req.params.hourEventualCost)
         )
       );
   } else {
     res.status(400).json({
-      msg: `No boiler with the eventual maintaince cost ${req.params.hour_eventual_cost}`,
+      msg: `No boiler with the eventual maintaince cost ${req.params.hourEventualCost}`,
     });
   }
 });

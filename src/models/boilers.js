@@ -16,15 +16,15 @@ const boilersSchema = new Schema({
     ref: "buildings",
     required: true,
   },
-  maintenance_period: {
+  maintenancePeriod: {
     type: String,
     required: false,
   },
-  hour_maintenance_cost: {
+  hourMaintenanceCost: {
     type: Number,
     required: false,
   },
-  hour_eventual_cost: {
+  hourEventualCost: {
     type: Number,
     required: false,
   },
