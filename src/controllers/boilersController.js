@@ -23,9 +23,9 @@ exports.create = (req, res) => {
     description: req.body.description,
     boilerType: req.body.boilerType,
     building: req.body.building,
-    maintenance_period: req.body.maintenance_period,
-    hour_maintenance_cost: req.body.hour_maintenance_cost,
-    hour_eventual_cost: req.body.hour_eventual_cost,
+    maintenancePeriod: req.body.maintenancePeriod,
+    hourMaintenanceCost: req.body.hourMaintenanceCost,
+    hourEventualCost: req.body.hourEventualCost,
   });
 
   //Save Boiler in the database
@@ -45,6 +45,8 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
   boilers
     .find({})
+    .populate("boilerType")
+    .populate("building")
     .then((data) => {
       res.status(200).send(data);
     })
