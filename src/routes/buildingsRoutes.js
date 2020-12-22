@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const buildings = require("../controllers/buildings")
+const buildings = require("../controllers/buildings");
 
 // Add a new Building
 router.post("/", buildings.create);

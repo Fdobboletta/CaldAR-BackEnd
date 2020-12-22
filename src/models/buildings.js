@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const buildingsSchema = mongoose.Schema(
@@ -9,6 +9,7 @@ const buildingsSchema = mongoose.Schema(
         },
         companyId:{
             type: Schema.Types.ObjectId, 
+            required: false,
         },
         fullname:{
             type: String,
@@ -16,9 +17,9 @@ const buildingsSchema = mongoose.Schema(
         },
         phone: {
             type: Number,
-            required: true,
+            required: false,
         }
     }
 )
 
-module.exports = mongoose.model('buildings', buildingsSchema);
+module.exports = mongoose.model("buildings", buildingsSchema);
