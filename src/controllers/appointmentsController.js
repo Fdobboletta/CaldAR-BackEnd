@@ -39,17 +39,20 @@ exports.create = (req,res) => {
     });
 };
 
-exports.findAll = (req, res) => {
-  appointments
-    .find({})
-    .then((data) => {
-      res.status(200).send(data);
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: "Some error ocurred while gettin all appointments",
-      });
-    });
+exports.findAll = (req,res) => {
+    appointments
+        .find({})
+        .populate("building")
+        .populate("boiler")
+        .populate("technician")
+        .then(data => {
+            res.status(200).send(data);
+        })
+        .catch(err => {
+            res.status(500).send ({
+                message: "Some error ocurred while gettin all appointments"
+            })
+        })
 };
 
 exports.update = (req,res) => {
