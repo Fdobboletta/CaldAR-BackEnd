@@ -137,6 +137,10 @@ exports.delete = (req, res) => {
 // Get all Technicians
 exports.findAll = (req, res) => {
   Technicians.find({})
+    .populate({
+      path: 'capabilities',
+      model: 'BoilerTypes',
+    })
     .then((data) => {
       res.status(200).send(data);
     })

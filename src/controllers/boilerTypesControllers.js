@@ -1,5 +1,5 @@
 const Boilers = require('../models/boilers');
-const BoilerTypes = require('../models/BoilerTypes');
+const BoilerTypes = require('../models/boilerTypes');
 const Technicians = require('../models/technician');
  
 // Add a new BoilerType
