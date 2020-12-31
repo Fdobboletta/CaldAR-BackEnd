@@ -8,16 +8,23 @@ exports.create = (req, res) => {
   const validatePhone = String(req.body.phone).length;
 
   if(validateAddressAndName) {
-      return res.status(400).json({ success: false, error: 'Buildings must have name and address, remember to enter both'});
+      return res.status(400).json({
+        error: 'Buildings must have name and address, remember to enter both'
+      });
   } else if(validateBuildingAddress) {
-      return res.status(400).json({ success: false, error: 'Buildings must have adress, remember to enter one'});
+      return res.status(400).json({
+        error: 'Buildings must have adress, remember to enter one'
+      });
   } else if(validateBuildingName) {
-      return res.status(400).json({ success: false, error: 'Buildings must have name, remember to enter one'});
+      return res.status(400).json({
+        error: 'Buildings must have name, remember to enter one'
+      });
   }
 
   if (validatePhone < 8 || validatePhone > 15){
-      res.status(400).json({ success: false, error: 'Phone number must have between 8 and 15 digits'});
-      return;
+    return res.status(400).json({
+      error: 'Phone number must have between 8 and 15 digits'
+    });
   }
 
   // Create a new building
@@ -36,7 +43,6 @@ exports.create = (req, res) => {
     })
     .catch((err) => {
       res.status(500).json({
-        success: false,
         error: "Some error occurred while creating the building." + err,
       });
     });
@@ -47,11 +53,10 @@ exports.findAll = (req, res) => {
   buildings.find({})
     .populate('company')
     .then((data) => {
-      res.status(200).json(data);
+      return res.status(200).json(data);
     })
     .catch((err) => {
-      res.status(500).json({
-        success: false,
+      return res.status(500).json({
         error: "Some error occurred while getting all buildings." + err,
       });
     });
@@ -64,15 +69,13 @@ exports.findById = (req, res) => {
     .then((data) => {
       if (!data) {
         return res.status(404).json({
-          success: false,
           error: `Building with id ${req.params.id} was not found`,
         });
       }
       res.status(200).json(data);
     })
     .catch((err) => {
-      res.status(500).send({
-        success: false,
+      res.status(500).json({
         error: "Some error occurred while retrieving building." + err,
       });
     });
@@ -92,14 +95,10 @@ exports.delete = (req, res) => {
             msg: "The building " + id + " has been deleted successfully.",
           });
         }
-        // Boilers.deleteMany({ building: req.params.id })
-        //   .then(function(){
-        //       res.status(200).json({message: "Building was deleted successfully."})
-        //   })
     })
     .catch((err) => {
       console.error(err);
-      res.status(500).send({
+      res.status(500).json({
         error: "Error removing building with id: " + id,
       });
     });
@@ -113,25 +112,35 @@ exports.update = (req, res) => {
   const validatePhone = String(req.body.phone).length;
 
   if(validateAddressAndName) {
-    return res.status(400).json({ success: false, error: "Buildings must have name and address, remember to enter both"});
+    return res.status(400).json({
+      error: "Buildings must have name and address, remember to enter both"
+    });
   } else if(validateBuildingAddress) {
-    return res.status(400).json({ success: false, error: "Buildings must have adress, remember to enter one"});
+    return res.status(400).json({
+      error: "Buildings must have adress, remember to enter one"
+    });
   } else if(validateBuildingName) {
-    return res.status(400).json({ success: false, error: "Buildings must have name, remember to enter one"});
+    return res.status(400).json({
+      error: "Buildings must have name, remember to enter one"
+    });
   } else if (validatePhone < 8 || validatePhone > 15){
-    return res.status(400).json({ success: false, error: "Phone number must have between 8 and 15 digits"});
+    return res.status(400).json({
+      error: "Phone number must have between 8 and 15 digits"
+    });
   }
 
   buildings.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })
     .then(data => {
       if (!data) {
-        res.status(404).json({ message: `There is no building with id=${req.params.id}` });
+        return res.status(404).json({ message: `There is no building with id=${req.params.id}` });
       }
-      res.status(200).json({ message: "Building updated successfully." });
+      return res.status(200).json({ message: "Building updated successfully." });
     })
     .catch(err => {
       console.error(err);
-      res.status(500).json({ success: false, error: "Error updating building with id=" + id });
+      return res.status(500).json({
+        error: "Error updating building with id=" + id,
+      });
     });
 };
 
@@ -142,17 +151,14 @@ exports.findByAttribute = (req, res) => {
     .then((data) => {
       if (data.length < 1) {
         return res.status(404).json({
-          success: false,
           error: `Company with id ${req.params.company} was not found`,
         });
       }
-      res.status(200).json(data);
+      return res.status(200).json(data);
     })
     .catch((err) => {
-      res.status(500).json({
-        success: false,
-        error:
-          "Some error occurred while getting a building.",
+      return res.status(500).json({
+        error: "Some error occurred while getting a building.",
       });
     });
 };
