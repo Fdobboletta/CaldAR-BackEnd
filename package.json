@@ -7,8 +7,7 @@
     "test": "npm test",
     "start": "node src/index.js",
     "lint": "eslint .",
-    "prettier": "prettier --write .",
-    "postinstall": "husky install"
+    "prettier": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,6 @@
   "devDependencies": {
     "eslint": "^7.15.0",
     "husky": "^5.0.4",
-    "nodemon": "^2.0.6",
     "prettier": "2.2.1"
   }
 }
