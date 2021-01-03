@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "eslint": "^7.15.0",
-    "husky": "^5.0.4",
+    "husky": "^5.0.6",
     "prettier": "2.2.1"
   }
 }
