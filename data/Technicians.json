@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "first_name": "Romona",
+    "last_name": "Marcus",
+    "email": "rmarcus0@go.com",
+    "typeIds": [2, 1, 2],
+    "skillsId": [2],
+    "hour_rate": "$2.22",
+    "daily_capacity": 1
+  },
+  {
+    "id": 2,
+    "first_name": "Alisun",
+    "last_name": "Gladebeck",
+    "email": "agladebeck1@whitehouse.gov",
+    "typeIds": [3, 1, 1],
+    "skillsId": [3],
+    "hour_rate": "$34.46",
+    "daily_capacity": 0
+  },
+  {
+    "id": 3,
+    "first_name": "Shepard",
+    "last_name": "Skewis",
+    "email": "sskewis2@si.edu",
+    "typeIds": [1, 2, 1],
+    "skillsId": [3],
+    "hour_rate": "$31.15",
+    "daily_capacity": 0
+  },
+  {
+    "id": 4,
+    "first_name": "Gareth",
+    "last_name": "Cotherill",
+    "email": "gcotherill3@examiner.com",
+    "typeIds": [3, 1, 2],
+    "skillsId": [3],
+    "hour_rate": "$26.96",
+    "daily_capacity": 0
+  },
+  {
+    "id": 5,
+    "first_name": "Judon",
+    "last_name": "Thorouggood",
+    "email": "jthorouggood4@boston.com",
+    "typeIds": [3, 2, 3],
+    "skillsId": [1],
+    "hour_rate": "$41.01",
+    "daily_capacity": 5
+  },
+  {
+    "id": 6,
+    "first_name": "Graeme",
+    "last_name": "Abernethy",
+    "email": "gabernethy5@etsy.com",
+    "typeIds": [2, 3, 1],
+    "skillsId": [3],
+    "hour_rate": "$29.60",
+    "daily_capacity": 8
+  },
+  {
+    "id": 7,
+    "first_name": "Netta",
+    "last_name": "Hargreves",
+    "email": "nhargreves6@wunderground.com",
+    "typeIds": [3, 1, 2],
+    "skillsId": [1, 2, 3],
+    "hour_rate": "$7.00",
+    "daily_capacity": 2
+  },
+  {
+    "id": 8,
+    "first_name": "May",
+    "last_name": "Yuryshev",
+    "email": "myuryshev7@hud.gov",
+    "typeIds": [3, 3, 3],
+    "skillsId": [1],
+    "hour_rate": "$23.74",
+    "daily_capacity": 2
+  },
+  {
+    "id": 9,
+    "first_name": "Emmet",
+    "last_name": "Nutten",
+    "email": "enutten8@shop-pro.jp",
+    "typeIds": [2, 1, 3],
+    "skillsId": [3],
+    "hour_rate": "$38.97",
+    "daily_capacity": 8
+  },
+  {
+    "id": 10,
+    "first_name": "Flo",
+    "last_name": "Foffano",
+    "email": "ffoffano9@t-online.de",
+    "typeIds": [1, 1, 1],
+    "skillsId": [2, 1],
+    "hour_rate": "$4.28",
+    "daily_capacity": 7
+  },
+  {
+    "id": 11,
+    "first_name": "Joli",
+    "last_name": "Robeson",
+    "email": "jrobesona@gmpg.org",
+    "typeIds": [3, 2, 3],
+    "skillsId": [1, 2],
+    "hour_rate": "$20.46",
+    "daily_capacity": 1
+  },
+  {
+    "id": 12,
+    "first_name": "Coralyn",
+    "last_name": "O'Cahill",
+    "email": "cocahillb@freewebs.com",
+    "typeIds": [2, 1, 2],
+    "skillsId": [3, 2],
+    "hour_rate": "$10.71",
+    "daily_capacity": 5
+  },
+  {
+    "id": 13,
+    "first_name": "Roma",
+    "last_name": "Kinnock",
+    "email": "rkinnockc@lycos.com",
+    "typeIds": [2, 1, 2],
+    "skillsId": [1],
+    "hour_rate": "$27.67",
+    "daily_capacity": 3
+  },
+  {
+    "id": 14,
+    "first_name": "Rowena",
+    "last_name": "Connochie",
+    "email": "rconnochied@hibu.com",
+    "typeIds": [2, 2, 1],
+    "skillsId": [3],
+    "hour_rate": "$47.59",
+    "daily_capacity": 8
+  },
+  {
+    "id": 15,
+    "first_name": "Gabrielle",
+    "last_name": "Hamal",
+    "email": "ghamale@purevolume.com",
+    "typeIds": [3, 3, 1],
+    "skillsId": [2, 2],
+    "hour_rate": "$32.09",
+    "daily_capacity": 7
+  },
+  {
+    "id": 16,
+    "first_name": "Gale",
+    "last_name": "Alessandrelli",
+    "email": "galessandrellif@fotki.com",
+    "typeIds": [2, 1, 2],
+    "skillsId": [1, 2],
+    "hour_rate": "$37.58",
+    "daily_capacity": 5
+  },
+  {
+    "id": 17,
+    "first_name": "Christie",
+    "last_name": "Harley",
+    "email": "charleyg@cargocollective.com",
+    "typeIds": [1, 2, 2],
+    "skillsId": [2, 3, 2],
+    "hour_rate": "$27.64",
+    "daily_capacity": 3
+  },
+  {
+    "id": 18,
+    "first_name": "Sheela",
+    "last_name": "Lippett",
+    "email": "slippetth@cbc.ca",
+    "typeIds": [1, 1, 3],
+    "skillsId": [2, 2],
+    "hour_rate": "$40.30",
+    "daily_capacity": 5
+  },
+  {
+    "id": 19,
+    "first_name": "Zeke",
+    "last_name": "Eudall",
+    "email": "zeudalli@storify.com",
+    "typeIds": [2, 1, 2],
+    "skillsId": [2, 3, 1],
+    "hour_rate": "$4.96",
+    "daily_capacity": 1
+  },
+  {
+    "id": 20,
+    "first_name": "Nancey",
+    "last_name": "Braunds",
+    "email": "nbraundsj@stanford.edu",
+    "typeIds": [3, 3, 3],
+    "skillsId": [2, 3],
+    "hour_rate": "$24.94",
+    "daily_capacity": 2
+  },
+  {
+    "id": 21,
+    "first_name": "Sterne",
+    "last_name": "Ogilvy",
+    "email": "sogilvyk@tmall.com",
+    "typeIds": [3, 3, 1],
+    "skillsId": [1, 1, 3],
+    "hour_rate": "$34.61",
+    "daily_capacity": 6
+  },
+  {
+    "id": 22,
+    "first_name": "Rollo",
+    "last_name": "Golsby",
+    "email": "rgolsbyl@bloglines.com",
+    "typeIds": [1, 2, 2],
+    "skillsId": [1],
+    "hour_rate": "$16.43",
+    "daily_capacity": 0
+  },
+  {
+    "id": 23,
+    "first_name": "Hobart",
+    "last_name": "Teek",
+    "email": "hteekm@google.com.br",
+    "typeIds": [3, 3, 1],
+    "skillsId": [1, 2, 3],
+    "hour_rate": "$20.13",
+    "daily_capacity": 7
+  },
+  {
+    "id": 24,
+    "first_name": "Leonanie",
+    "last_name": "MacAne",
+    "email": "lmacanen@imageshack.us",
+    "typeIds": [3, 1, 3],
+    "skillsId": [2],
+    "hour_rate": "$28.80",
+    "daily_capacity": 8
+  },
+  {
+    "id": 25,
+    "first_name": "Beltran",
+    "last_name": "Busher",
+    "email": "bbushero@ed.gov",
+    "typeIds": [1, 1, 3],
+    "skillsId": [3],
+    "hour_rate": "$19.68",
+    "daily_capacity": 2
+  },
+  {
+    "id": 26,
+    "first_name": "Frans",
+    "last_name": "Denyagin",
+    "email": "fdenyaginp@hibu.com",
+    "typeIds": [3, 1, 1],
+    "skillsId": [1, 2, 3],
+    "hour_rate": "$8.86",
+    "daily_capacity": 4
+  },
+  {
+    "id": 27,
+    "first_name": "Ashli",
+    "last_name": "Gabbatt",
+    "email": "agabbattq@springer.com",
+    "typeIds": [3, 3, 3],
+    "skillsId": [2, 2],
+    "hour_rate": "$43.65",
+    "daily_capacity": 3
+  },
+  {
+    "id": 28,
+    "first_name": "Barnie",
+    "last_name": "Casa",
+    "email": "bcasar@msu.edu",
+    "typeIds": [3, 3, 2],
+    "skillsId": [2, 2, 3],
+    "hour_rate": "$5.61",
+    "daily_capacity": 5
+  },
+  {
+    "id": 29,
+    "first_name": "Anatollo",
+    "last_name": "Brazer",
+    "email": "abrazers@storify.com",
+    "typeIds": [1, 2, 1],
+    "skillsId": [2, 3, 3],
+    "hour_rate": "$38.37",
+    "daily_capacity": 5
+  },
+  {
+    "id": 30,
+    "first_name": "Dunn",
+    "last_name": "Yakuntsov",
+    "email": "dyakuntsovt@tmall.com",
+    "typeIds": [1, 3, 1],
+    "skillsId": [3, 1, 1],
+    "hour_rate": "$47.03",
+    "daily_capacity": 8
+  },
+  {
+    "id": 31,
+    "first_name": "Thomasine",
+    "last_name": "Denge",
+    "email": "tdengeu@toplist.cz",
+    "typeIds": [1, 2, 1],
+    "skillsId": [2, 3, 1],
+    "hour_rate": "$41.10",
+    "daily_capacity": 3
+  },
+  {
+    "id": 32,
+    "first_name": "Arlinda",
+    "last_name": "Choffin",
+    "email": "achoffinv@mlb.com",
+    "typeIds": [1, 2, 3],
+    "skillsId": [3],
+    "hour_rate": "$0.67",
+    "daily_capacity": 6
+  },
+  {
+    "id": 33,
+    "first_name": "Esta",
+    "last_name": "Armstead",
+    "email": "earmsteadw@yandex.ru",
+    "typeIds": [2, 2, 2],
+    "skillsId": [1, 1, 3],
+    "hour_rate": "$20.99",
+    "daily_capacity": 5
+  },
+  {
+    "id": 34,
+    "first_name": "Gregoor",
+    "last_name": "Lewisham",
+    "email": "glewishamx@issuu.com",
+    "typeIds": [1, 3, 1],
+    "skillsId": [1, 3],
+    "hour_rate": "$12.39",
+    "daily_capacity": 7
+  },
+  {
+    "id": 35,
+    "first_name": "Farris",
+    "last_name": "Garrett",
+    "email": "fgarretty@moonfruit.com",
+    "typeIds": [1, 2, 2],
+    "skillsId": [3, 1],
+    "hour_rate": "$40.53",
+    "daily_capacity": 1
+  },
+  {
+    "id": 36,
+    "first_name": "Hymie",
+    "last_name": "Tommaseo",
+    "email": "htommaseoz@ebay.com",
+    "typeIds": [2, 2, 3],
+    "skillsId": [1, 2],
+    "hour_rate": "$31.33",
+    "daily_capacity": 6
+  },
+  {
+    "id": 37,
+    "first_name": "Thelma",
+    "last_name": "Chaplain",
+    "email": "tchaplain10@sohu.com",
+    "typeIds": [3, 2, 3],
+    "skillsId": [2, 3],
+    "hour_rate": "$13.70",
+    "daily_capacity": 4
+  },
+  {
+    "id": 38,
+    "first_name": "Kendricks",
+    "last_name": "Conws",
+    "email": "kconws11@bluehost.com",
+    "typeIds": [1, 3, 3],
+    "skillsId": [1, 1],
+    "hour_rate": "$29.99",
+    "daily_capacity": 1
+  },
+  {
+    "id": 39,
+    "first_name": "Federica",
+    "last_name": "Saiz",
+    "email": "fsaiz12@gov.uk",
+    "typeIds": [1, 1, 1],
+    "skillsId": [1],
+    "hour_rate": "$32.86",
+    "daily_capacity": 5
+  },
+  {
+    "id": 40,
+    "first_name": "Dirk",
+    "last_name": "Monelli",
+    "email": "dmonelli13@issuu.com",
+    "typeIds": [1, 2, 2],
+    "skillsId": [1, 3, 3],
+    "hour_rate": "$5.29",
+    "daily_capacity": 7
+  },
+  {
+    "id": 41,
+    "first_name": "Astrix",
+    "last_name": "Griswaite",
+    "email": "agriswaite14@amazonaws.com",
+    "typeIds": [1, 3, 3],
+    "skillsId": [3],
+    "hour_rate": "$35.17",
+    "daily_capacity": 1
+  },
+  {
+    "id": 42,
+    "first_name": "Archibald",
+    "last_name": "Kennedy",
+    "email": "akennedy15@princeton.edu",
+    "typeIds": [3, 2, 2],
+    "skillsId": [1, 2, 1],
+    "hour_rate": "$38.33",
+    "daily_capacity": 2
+  },
+  {
+    "id": 43,
+    "first_name": "Myrwyn",
+    "last_name": "Eles",
+    "email": "meles16@oaic.gov.au",
+    "typeIds": [1, 3, 2],
+    "skillsId": [2, 3],
+    "hour_rate": "$43.14",
+    "daily_capacity": 8
+  },
+  {
+    "id": 44,
+    "first_name": "Rad",
+    "last_name": "Huddy",
+    "email": "rhuddy17@github.com",
+    "typeIds": [3, 2, 3],
+    "skillsId": [3, 3],
+    "hour_rate": "$42.81",
+    "daily_capacity": 0
+  },
+  {
+    "id": 45,
+    "first_name": "Pia",
+    "last_name": "Furniss",
+    "email": "pfurniss18@flickr.com",
+    "typeIds": [3, 2, 3],
+    "skillsId": [2],
+    "hour_rate": "$40.22",
+    "daily_capacity": 7
+  },
+  {
+    "id": 46,
+    "first_name": "Leonelle",
+    "last_name": "Riglar",
+    "email": "lriglar19@whitehouse.gov",
+    "typeIds": [2, 3, 2],
+    "skillsId": [2],
+    "hour_rate": "$18.43",
+    "daily_capacity": 0
+  },
+  {
+    "id": 47,
+    "first_name": "Kingsley",
+    "last_name": "Clavering",
+    "email": "kclavering1a@comcast.net",
+    "typeIds": [1, 2, 3],
+    "skillsId": [2, 1, 2],
+    "hour_rate": "$12.17",
+    "daily_capacity": 4
+  },
+  {
+    "id": 48,
+    "first_name": "Fay",
+    "last_name": "Enticott",
+    "email": "fenticott1b@biblegateway.com",
+    "typeIds": [3, 3, 1],
+    "skillsId": [1, 1, 3],
+    "hour_rate": "$43.54",
+    "daily_capacity": 7
+  },
+  {
+    "id": 49,
+    "first_name": "Maddie",
+    "last_name": "Wrightem",
+    "email": "mwrightem1c@whitehouse.gov",
+    "typeIds": [1, 3, 2],
+    "skillsId": [1, 3, 2],
+    "hour_rate": "$0.80",
+    "daily_capacity": 7
+  },
+  {
+    "id": 50,
+    "first_name": "Florenza",
+    "last_name": "Striker",
+    "email": "fstriker1d@furl.net",
+    "typeIds": [2, 1, 2],
+    "skillsId": [2, 1, 1],
+    "hour_rate": "$33.29",
+    "daily_capacity": 6
+  }
+]

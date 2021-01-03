@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "customerType": "business",
+    "email": "ebayles0@phpbb.com",
+    "buildings": [81, 86, 43, 18, 35],
+    "fiscal_address": "495 Londonderry Drive"
+  },
+  {
+    "id": 2,
+    "customerType": "business",
+    "email": "sdunlea1@umn.edu",
+    "buildings": [50, 42, 73, 71, 46, 94, 46],
+    "fiscal_address": "63567 Dwight Hill"
+  },
+  {
+    "id": 3,
+    "customerType": "business",
+    "email": "mtommasi2@ebay.co.uk",
+    "buildings": [34, 25, 16, 55, 32],
+    "fiscal_address": "45 Mariners Cove Alley"
+  },
+  {
+    "id": 4,
+    "customerType": "business",
+    "email": "rwood3@canalblog.com",
+    "buildings": [70, 37, 85, 77, 51, 60, 60, 19, 72],
+    "fiscal_address": "7 Jackson Junction"
+  },
+  {
+    "id": 5,
+    "customerType": "business",
+    "email": "dostler4@noaa.gov",
+    "buildings": [88, 89, 93],
+    "fiscal_address": "82 Thackeray Drive"
+  },
+  {
+    "id": 6,
+    "customerType": "particular",
+    "email": "anoon5@sun.com",
+    "buildings": [88, 45],
+    "fiscal_address": "842 Iowa Crossing"
+  },
+  {
+    "id": 7,
+    "customerType": "business",
+    "email": "goldmeadow6@desdev.cn",
+    "buildings": [17, 26, 33, 88, 39, 38, 15, 5, 80, 57],
+    "fiscal_address": "58 Merry Road"
+  },
+  {
+    "id": 8,
+    "customerType": "particular",
+    "email": "ebullan7@ebay.com",
+    "buildings": [25, 51, 43, 28, 29, 74, 14],
+    "fiscal_address": "205 Holy Cross Avenue"
+  },
+  {
+    "id": 9,
+    "customerType": "particular",
+    "email": "cdenisot8@gnu.org",
+    "buildings": [30, 57, 58, 11, 59, 55, 44, 10, 68],
+    "fiscal_address": "677 Mcguire Plaza"
+  },
+  {
+    "id": 10,
+    "customerType": "particular",
+    "email": "nduckering9@elegantthemes.com",
+    "buildings": [34, 20],
+    "fiscal_address": "626 Manitowish Circle"
+  },
+  {
+    "id": 11,
+    "customerType": "particular",
+    "email": "vyerilla@noaa.gov",
+    "buildings": [93, 81, 82, 38],
+    "fiscal_address": "186 Milwaukee Hill"
+  },
+  {
+    "id": 12,
+    "customerType": "business",
+    "email": "wlundonb@squidoo.com",
+    "buildings": [12, 59],
+    "fiscal_address": "1 Pierstorff Hill"
+  },
+  {
+    "id": 13,
+    "customerType": "particular",
+    "email": "kbowlec@dropbox.com",
+    "buildings": [3, 46, 68, 86, 22, 85, 26, 39, 34, 80],
+    "fiscal_address": "5 Bunting Pass"
+  },
+  {
+    "id": 14,
+    "customerType": "business",
+    "email": "cfaransd@ihg.com",
+    "buildings": [65, 84, 34, 24, 56, 30, 46],
+    "fiscal_address": "5 Holmberg Trail"
+  },
+  {
+    "id": 15,
+    "customerType": "business",
+    "email": "ethone@upenn.edu",
+    "buildings": [48, 35, 80, 74, 31],
+    "fiscal_address": "04035 Chive Way"
+  },
+  {
+    "id": 16,
+    "customerType": "particular",
+    "email": "rkopischf@hexun.com",
+    "buildings": [100],
+    "fiscal_address": "67883 Mesta Hill"
+  },
+  {
+    "id": 17,
+    "customerType": "business",
+    "email": "omcreynoldsg@census.gov",
+    "buildings": [93, 55, 92, 54, 71, 70, 21],
+    "fiscal_address": "84948 Walton Drive"
+  },
+  {
+    "id": 18,
+    "customerType": "business",
+    "email": "agrenehamh@sina.com.cn",
+    "buildings": [52, 35, 95, 8, 91],
+    "fiscal_address": "7184 Heath Hill"
+  },
+  {
+    "id": 19,
+    "customerType": "particular",
+    "email": "mtoopi@hc360.com",
+    "buildings": [6],
+    "fiscal_address": "0 Susan Court"
+  },
+  {
+    "id": 20,
+    "customerType": "business",
+    "email": "bwilcocksj@dot.gov",
+    "buildings": [96, 29, 96],
+    "fiscal_address": "42 North Trail"
+  },
+  {
+    "id": 21,
+    "customerType": "business",
+    "email": "bborrellk@independent.co.uk",
+    "buildings": [84, 74, 49, 43, 3, 13, 5, 4],
+    "fiscal_address": "794 Scofield Center"
+  },
+  {
+    "id": 22,
+    "customerType": "particular",
+    "email": "jepplel@jimdo.com",
+    "buildings": [5],
+    "fiscal_address": "42306 Forest Center"
+  },
+  {
+    "id": 23,
+    "customerType": "particular",
+    "email": "jsimcoxm@booking.com",
+    "buildings": [85, 56],
+    "fiscal_address": "58372 Sundown Trail"
+  },
+  {
+    "id": 24,
+    "customerType": "business",
+    "email": "temmetn@about.me",
+    "buildings": [95, 97, 34, 86, 84, 81, 39, 26, 49],
+    "fiscal_address": "98 Jana Drive"
+  },
+  {
+    "id": 25,
+    "customerType": "business",
+    "email": "mrizzoo@forbes.com",
+    "buildings": [69, 12, 98, 28, 86, 41],
+    "fiscal_address": "2470 Susan Lane"
+  },
+  {
+    "id": 26,
+    "customerType": "particular",
+    "email": "kkeilingp@devhub.com",
+    "buildings": [84, 24, 94],
+    "fiscal_address": "2455 Oxford Place"
+  },
+  {
+    "id": 27,
+    "customerType": "business",
+    "email": "ffussieq@si.edu",
+    "buildings": [13],
+    "fiscal_address": "663 Fordem Avenue"
+  },
+  {
+    "id": 28,
+    "customerType": "particular",
+    "email": "mmixerr@sourceforge.net",
+    "buildings": [22, 5, 57, 78, 43, 24],
+    "fiscal_address": "254 Thackeray Park"
+  },
+  {
+    "id": 29,
+    "customerType": "business",
+    "email": "mbrookbanks@vkontakte.ru",
+    "buildings": [61, 98, 12, 83],
+    "fiscal_address": "57 Hovde Crossing"
+  },
+  {
+    "id": 30,
+    "customerType": "business",
+    "email": "mrenvoiset@etsy.com",
+    "buildings": [39, 60, 62, 69],
+    "fiscal_address": "87409 2nd Parkway"
+  },
+  {
+    "id": 31,
+    "customerType": "business",
+    "email": "rcutfordu@ed.gov",
+    "buildings": [25, 52, 58, 95, 61, 49, 2, 70, 30],
+    "fiscal_address": "8595 Norway Maple Trail"
+  },
+  {
+    "id": 32,
+    "customerType": "business",
+    "email": "jmerrillv@imgur.com",
+    "buildings": [60, 67, 77],
+    "fiscal_address": "13 Pleasure Drive"
+  },
+  {
+    "id": 33,
+    "customerType": "business",
+    "email": "bquodlingw@chicagotribune.com",
+    "buildings": [58, 1],
+    "fiscal_address": "2 Bartillon Place"
+  },
+  {
+    "id": 34,
+    "customerType": "particular",
+    "email": "bbachex@wufoo.com",
+    "buildings": [57],
+    "fiscal_address": "7 Harper Court"
+  },
+  {
+    "id": 35,
+    "customerType": "business",
+    "email": "eboomesy@marketwatch.com",
+    "buildings": [50, 33, 81, 2, 68, 11, 64, 12],
+    "fiscal_address": "23 Ronald Regan Park"
+  },
+  {
+    "id": 36,
+    "customerType": "particular",
+    "email": "cbooelnz@house.gov",
+    "buildings": [63],
+    "fiscal_address": "74 Superior Hill"
+  },
+  {
+    "id": 37,
+    "customerType": "business",
+    "email": "tfearns10@weather.com",
+    "buildings": [72],
+    "fiscal_address": "42 Tony Park"
+  },
+  {
+    "id": 38,
+    "customerType": "particular",
+    "email": "ngaines11@bigcartel.com",
+    "buildings": [70],
+    "fiscal_address": "958 Westend Court"
+  },
+  {
+    "id": 39,
+    "customerType": "particular",
+    "email": "mdiggons12@guardian.co.uk",
+    "buildings": [67, 89, 6],
+    "fiscal_address": "8852 Colorado Point"
+  },
+  {
+    "id": 40,
+    "customerType": "particular",
+    "email": "blownes13@furl.net",
+    "buildings": [82, 59, 66, 39, 24, 5, 93, 54, 2, 82],
+    "fiscal_address": "9 Kipling Street"
+  },
+  {
+    "id": 41,
+    "customerType": "business",
+    "email": "kpechard14@parallels.com",
+    "buildings": [44, 79, 89, 14, 96, 86],
+    "fiscal_address": "1226 Logan Center"
+  },
+  {
+    "id": 42,
+    "customerType": "business",
+    "email": "jwilcott15@ow.ly",
+    "buildings": [72, 51, 99, 77, 89, 62],
+    "fiscal_address": "565 Evergreen Road"
+  },
+  {
+    "id": 43,
+    "customerType": "particular",
+    "email": "snelsey16@slashdot.org",
+    "buildings": [32, 84, 67, 4, 52, 45, 1, 47, 39],
+    "fiscal_address": "8 Almo Street"
+  },
+  {
+    "id": 44,
+    "customerType": "business",
+    "email": "aspeechley17@apache.org",
+    "buildings": [78, 85, 87],
+    "fiscal_address": "0058 Spohn Road"
+  },
+  {
+    "id": 45,
+    "customerType": "particular",
+    "email": "nsebyer18@webs.com",
+    "buildings": [47, 46, 44, 95, 10, 3],
+    "fiscal_address": "78343 Walton Terrace"
+  },
+  {
+    "id": 46,
+    "customerType": "business",
+    "email": "kcardenas19@altervista.org",
+    "buildings": [88, 78],
+    "fiscal_address": "65 Crowley Lane"
+  },
+  {
+    "id": 47,
+    "customerType": "particular",
+    "email": "tjuggins1a@surveymonkey.com",
+    "buildings": [21, 20, 59, 52, 21, 79, 2, 43, 15],
+    "fiscal_address": "67199 Elmside Terrace"
+  },
+  {
+    "id": 48,
+    "customerType": "business",
+    "email": "jagent1b@indiatimes.com",
+    "buildings": [8, 5, 72, 28, 70, 10, 44, 94, 23],
+    "fiscal_address": "25135 Heffernan Alley"
+  },
+  {
+    "id": 49,
+    "customerType": "particular",
+    "email": "ljoontjes1c@hibu.com",
+    "buildings": [58, 59, 79, 24],
+    "fiscal_address": "91862 Garrison Hill"
+  },
+  {
+    "id": 50,
+    "customerType": "particular",
+    "email": "aflawn1d@instagram.com",
+    "buildings": [50, 58, 5, 79, 61, 88, 80, 32, 11, 98],
+    "fiscal_address": "1184 Mayer Crossing"
+  }
+]
