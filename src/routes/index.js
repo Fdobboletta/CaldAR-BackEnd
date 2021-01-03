@@ -14,5 +14,6 @@ router.use("/company", companyRouter);
 router.use("/boilers", boilersRouter);
 router.use("/technicians", technicianRouter);
 router.use("/appointment", appointmentsRouter);
+router.use('/', express.static('public'))
 
 module.exports = router;
