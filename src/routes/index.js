@@ -8,6 +8,7 @@ const express = require("express");
 const path = require("path");
 
 const router = express.Router();
+router.use(express.static(path.join(__dirname, "../../public")));
 router.use(express.static("public"));
 
 router.use("/types", boilerTypesRouter);
@@ -16,6 +17,7 @@ router.use("/company", companyRouter);
 router.use("/boilers", boilersRouter);
 router.use("/technicians", technicianRouter);
 router.use("/appointment", appointmentsRouter);
+
 router.use((req, res, next) => {
     res.sendFile(path.join(__dirname, "../../public", "index.html"));
 });
