@@ -13,7 +13,7 @@ router.use(express.static("public"));
 
 router.use('/api/v1/types', boilerTypesRouter);
 router.use('/api/v1/buildings', buildingsRouter);
-router.use('/company', companyRouter);
+router.use('/api/v1//company', companyRouter);
 router.use('/api/v1/boilers', boilersRouter);
 router.use('/technicians', technicianRouter);
 router.use('/api/v1/appointments', appointmentsRouter);
