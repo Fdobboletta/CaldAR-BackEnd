@@ -10,28 +10,30 @@ exports.create = (req, res) => {
   const lastName = req.body.lastName;
 
   //Validate Request
-  if(!capabilities) {
-    res.status(400).send ({msg: "Capabilities are required. Enter a capabilitie type."});
-    return;
-  }  
-  
-  if(!hour_rate) {
-    res.status(400).send ({msg: "Hour rate is required."});
-    return;   
-  } 
-  
-  if(!phone) {
-    res.status(400).send ({msg: "Phone number is required."});
-    return; 
-  }
-  
-  if(!firstName) {
-    res.status(400).send ({msg: "First name is required."});
+  if (!capabilities) {
+    res
+      .status(400)
+      .send({ msg: "Capabilities are required. Enter a capabilitie type." });
     return;
   }
-  
-  if(!lastName) {
-    res.status(400).send ({msg: "Last name is required."});
+
+  if (!hour_rate) {
+    res.status(400).send({ msg: "Hour rate is required." });
+    return;
+  }
+
+  if (!phone) {
+    res.status(400).send({ msg: "Phone number is required." });
+    return;
+  }
+
+  if (!firstName) {
+    res.status(400).send({ msg: "First name is required." });
+    return;
+  }
+
+  if (!lastName) {
+    res.status(400).send({ msg: "Last name is required." });
     return;
   }
 
@@ -69,32 +71,36 @@ exports.update = (req, res) => {
   const lastName = req.body.lastName;
 
   // Validate request
-  if(!capabilities) {
-    res.status(400).send ({msg: "Capabilities are required. Enter a capabilitie type."});
-    return;
-  }  
-  
-  if(!hour_rate) {
-    res.status(400).send ({msg: "Hour rate is required."});
-    return;   
-  } 
-  
-  if(!phone) {
-    res.status(400).send ({msg: "Phone number is required."});
-    return; 
-  }
-  
-  if(!firstName) {
-    res.status(400).send ({msg: "First name is required."});
+  if (!capabilities) {
+    res
+      .status(400)
+      .send({ msg: "Capabilities are required. Enter a capabilitie type." });
     return;
   }
 
-  if(!lastName) {
-    res.status(400).send ({msg: "Last name is required."});
+  if (!hour_rate) {
+    res.status(400).send({ msg: "Hour rate is required." });
     return;
   }
 
-  Technicians.findByIdAndUpdate(req.params.id, req.body, { useFindAndModify: false })
+  if (!phone) {
+    res.status(400).send({ msg: "Phone number is required." });
+    return;
+  }
+
+  if (!firstName) {
+    res.status(400).send({ msg: "First name is required." });
+    return;
+  }
+
+  if (!lastName) {
+    res.status(400).send({ msg: "Last name is required." });
+    return;
+  }
+
+  Technicians.findByIdAndUpdate(req.params.id, req.body, {
+    useFindAndModify: false,
+  })
     .then((data) => {
       if (!data) {
         res.status(404).send({
@@ -124,12 +130,12 @@ exports.delete = (req, res) => {
       Appointments.deleteMany({ technician: req.params.id }).then(() => {
         res.status(200).send({
           message: "Technician was deleted successfully.",
-        })
-      })
+        });
+      });
     })
     .catch((err) => {
       res.status(500).send({
-        message: `Error removing Technician with id ${req.params.id}.`
+        message: `Error removing Technician with id ${req.params.id}.`,
       });
     });
 };
@@ -138,8 +144,8 @@ exports.delete = (req, res) => {
 exports.findAll = (req, res) => {
   Technicians.find({})
     .populate({
-      path: 'capabilities',
-      model: 'BoilerTypes',
+      path: "capabilities",
+      model: "BoilerTypes",
     })
     .then((data) => {
       res.status(200).send(data);

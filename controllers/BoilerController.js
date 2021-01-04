@@ -87,8 +87,7 @@ app.get("/getBoilerByHourMaintainceCost/:hour_maintaince_cost", (req, res) => {
 //getBoilerByHourEventualCost
 app.get("/getBoilerByHourEventualCost/:hourEventualCost", (req, res) => {
   const found = boilers.some(
-    (boiler) =>
-      boiler.hourEventualCost === String(req.params.hourEventualCost)
+    (boiler) => boiler.hourEventualCost === String(req.params.hourEventualCost)
   );
   if (found) {
     res

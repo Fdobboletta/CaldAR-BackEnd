@@ -1,11 +1,11 @@
-const express = require('express');
-const router = require('./routes');
-const mongoose = require('mongoose');
-const process = require('process');
+const express = require("express");
+const router = require("./routes");
+const mongoose = require("mongoose");
+const process = require("process");
 const PORT = process.env.PORT || 4000;
 const app = express();
 const bodyParser = require("body-parser");
-const cors = require ('cors');
+const cors = require("cors");
 
 // support parsing of application/json type post data
 app.use(bodyParser.json());
