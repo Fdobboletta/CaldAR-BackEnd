@@ -1,50 +1,352 @@
-[{"id":1,"typeId":7,"maintaince_rate":"quarterly","hour_maintaince_cost":"$21.49","hour_eventual_cost":"$44.97"},
-{"id":2,"typeId":25,"maintaince_rate":"yearly","hour_maintaince_cost":"$32.79","hour_eventual_cost":"$42.63"},
-{"id":3,"typeId":8,"maintaince_rate":"monthly","hour_maintaince_cost":"$37.29","hour_eventual_cost":"$27.06"},
-{"id":4,"typeId":91,"maintaince_rate":"yearly","hour_maintaince_cost":"$46.33","hour_eventual_cost":"$6.55"},
-{"id":5,"typeId":26,"maintaince_rate":"yearly","hour_maintaince_cost":"$40.50","hour_eventual_cost":"$44.15"},
-{"id":6,"typeId":31,"maintaince_rate":"yearly","hour_maintaince_cost":"$17.99","hour_eventual_cost":"$39.09"},
-{"id":7,"typeId":21,"maintaince_rate":"yearly","hour_maintaince_cost":"$17.72","hour_eventual_cost":"$47.44"},
-{"id":8,"typeId":54,"maintaince_rate":"quarterly","hour_maintaince_cost":"$8.22","hour_eventual_cost":"$34.19"},
-{"id":9,"typeId":46,"maintaince_rate":"yearly","hour_maintaince_cost":"$36.07","hour_eventual_cost":"$11.35"},
-{"id":10,"typeId":21,"maintaince_rate":"quarterly","hour_maintaince_cost":"$34.31","hour_eventual_cost":"$32.62"},
-{"id":11,"typeId":67,"maintaince_rate":"monthly","hour_maintaince_cost":"$31.66","hour_eventual_cost":"$15.74"},
-{"id":12,"typeId":43,"maintaince_rate":"quarterly","hour_maintaince_cost":"$9.42","hour_eventual_cost":"$28.55"},
-{"id":13,"typeId":50,"maintaince_rate":"monthly","hour_maintaince_cost":"$23.73","hour_eventual_cost":"$12.64"},
-{"id":14,"typeId":30,"maintaince_rate":"yearly","hour_maintaince_cost":"$16.63","hour_eventual_cost":"$13.31"},
-{"id":15,"typeId":59,"maintaince_rate":"monthly","hour_maintaince_cost":"$7.85","hour_eventual_cost":"$14.92"},
-{"id":16,"typeId":34,"maintaince_rate":"monthly","hour_maintaince_cost":"$10.32","hour_eventual_cost":"$20.92"},
-{"id":17,"typeId":42,"maintaince_rate":"yearly","hour_maintaince_cost":"$31.46","hour_eventual_cost":"$2.65"},
-{"id":18,"typeId":36,"maintaince_rate":"quarterly","hour_maintaince_cost":"$0.25","hour_eventual_cost":"$39.48"},
-{"id":19,"typeId":42,"maintaince_rate":"yearly","hour_maintaince_cost":"$29.19","hour_eventual_cost":"$44.09"},
-{"id":20,"typeId":63,"maintaince_rate":"yearly","hour_maintaince_cost":"$44.08","hour_eventual_cost":"$33.27"},
-{"id":21,"typeId":76,"maintaince_rate":"yearly","hour_maintaince_cost":"$32.62","hour_eventual_cost":"$12.92"},
-{"id":22,"typeId":33,"maintaince_rate":"monthly","hour_maintaince_cost":"$3.20","hour_eventual_cost":"$22.82"},
-{"id":23,"typeId":34,"maintaince_rate":"yearly","hour_maintaince_cost":"$47.79","hour_eventual_cost":"$38.97"},
-{"id":24,"typeId":99,"maintaince_rate":"monthly","hour_maintaince_cost":"$38.18","hour_eventual_cost":"$34.96"},
-{"id":25,"typeId":78,"maintaince_rate":"quarterly","hour_maintaince_cost":"$32.20","hour_eventual_cost":"$32.56"},
-{"id":26,"typeId":49,"maintaince_rate":"monthly","hour_maintaince_cost":"$4.92","hour_eventual_cost":"$8.53"},
-{"id":27,"typeId":62,"maintaince_rate":"yearly","hour_maintaince_cost":"$34.15","hour_eventual_cost":"$4.68"},
-{"id":28,"typeId":1,"maintaince_rate":"monthly","hour_maintaince_cost":"$19.16","hour_eventual_cost":"$22.59"},
-{"id":29,"typeId":33,"maintaince_rate":"quarterly","hour_maintaince_cost":"$18.01","hour_eventual_cost":"$42.65"},
-{"id":30,"typeId":14,"maintaince_rate":"monthly","hour_maintaince_cost":"$24.73","hour_eventual_cost":"$24.58"},
-{"id":31,"typeId":43,"maintaince_rate":"monthly","hour_maintaince_cost":"$33.16","hour_eventual_cost":"$34.88"},
-{"id":32,"typeId":94,"maintaince_rate":"quarterly","hour_maintaince_cost":"$18.12","hour_eventual_cost":"$35.48"},
-{"id":33,"typeId":74,"maintaince_rate":"monthly","hour_maintaince_cost":"$16.21","hour_eventual_cost":"$36.26"},
-{"id":34,"typeId":67,"maintaince_rate":"monthly","hour_maintaince_cost":"$14.06","hour_eventual_cost":"$47.35"},
-{"id":35,"typeId":74,"maintaince_rate":"quarterly","hour_maintaince_cost":"$35.46","hour_eventual_cost":"$46.26"},
-{"id":36,"typeId":52,"maintaince_rate":"quarterly","hour_maintaince_cost":"$22.65","hour_eventual_cost":"$40.82"},
-{"id":37,"typeId":37,"maintaince_rate":"monthly","hour_maintaince_cost":"$3.27","hour_eventual_cost":"$7.23"},
-{"id":38,"typeId":78,"maintaince_rate":"monthly","hour_maintaince_cost":"$21.49","hour_eventual_cost":"$24.84"},
-{"id":39,"typeId":29,"maintaince_rate":"quarterly","hour_maintaince_cost":"$28.92","hour_eventual_cost":"$46.74"},
-{"id":40,"typeId":87,"maintaince_rate":"monthly","hour_maintaince_cost":"$1.80","hour_eventual_cost":"$6.84"},
-{"id":41,"typeId":73,"maintaince_rate":"monthly","hour_maintaince_cost":"$43.85","hour_eventual_cost":"$10.65"},
-{"id":42,"typeId":65,"maintaince_rate":"yearly","hour_maintaince_cost":"$9.24","hour_eventual_cost":"$8.53"},
-{"id":43,"typeId":88,"maintaince_rate":"monthly","hour_maintaince_cost":"$3.79","hour_eventual_cost":"$27.28"},
-{"id":44,"typeId":21,"maintaince_rate":"monthly","hour_maintaince_cost":"$2.30","hour_eventual_cost":"$36.80"},
-{"id":45,"typeId":64,"maintaince_rate":"yearly","hour_maintaince_cost":"$8.02","hour_eventual_cost":"$34.07"},
-{"id":46,"typeId":88,"maintaince_rate":"yearly","hour_maintaince_cost":"$37.73","hour_eventual_cost":"$16.34"},
-{"id":47,"typeId":89,"maintaince_rate":"quarterly","hour_maintaince_cost":"$15.30","hour_eventual_cost":"$26.32"},
-{"id":48,"typeId":32,"maintaince_rate":"yearly","hour_maintaince_cost":"$8.99","hour_eventual_cost":"$3.93"},
-{"id":49,"typeId":63,"maintaince_rate":"monthly","hour_maintaince_cost":"$18.09","hour_eventual_cost":"$29.64"},
-{"id":50,"typeId":49,"maintaince_rate":"yearly","hour_maintaince_cost":"$3.52","hour_eventual_cost":"$27.91"}]
+[
+  {
+    "id": 1,
+    "typeId": 7,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$21.49",
+    "hourEventualCost": "$44.97"
+  },
+  {
+    "id": 2,
+    "typeId": 25,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$32.79",
+    "hourEventualCost": "$42.63"
+  },
+  {
+    "id": 3,
+    "typeId": 8,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$37.29",
+    "hourEventualCost": "$27.06"
+  },
+  {
+    "id": 4,
+    "typeId": 91,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$46.33",
+    "hourEventualCost": "$6.55"
+  },
+  {
+    "id": 5,
+    "typeId": 26,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$40.50",
+    "hourEventualCost": "$44.15"
+  },
+  {
+    "id": 6,
+    "typeId": 31,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$17.99",
+    "hourEventualCost": "$39.09"
+  },
+  {
+    "id": 7,
+    "typeId": 21,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$17.72",
+    "hourEventualCost": "$47.44"
+  },
+  {
+    "id": 8,
+    "typeId": 54,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$8.22",
+    "hourEventualCost": "$34.19"
+  },
+  {
+    "id": 9,
+    "typeId": 46,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$36.07",
+    "hourEventualCost": "$11.35"
+  },
+  {
+    "id": 10,
+    "typeId": 21,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$34.31",
+    "hourEventualCost": "$32.62"
+  },
+  {
+    "id": 11,
+    "typeId": 67,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$31.66",
+    "hourEventualCost": "$15.74"
+  },
+  {
+    "id": 12,
+    "typeId": 43,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$9.42",
+    "hourEventualCost": "$28.55"
+  },
+  {
+    "id": 13,
+    "typeId": 50,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$23.73",
+    "hourEventualCost": "$12.64"
+  },
+  {
+    "id": 14,
+    "typeId": 30,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$16.63",
+    "hourEventualCost": "$13.31"
+  },
+  {
+    "id": 15,
+    "typeId": 59,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$7.85",
+    "hourEventualCost": "$14.92"
+  },
+  {
+    "id": 16,
+    "typeId": 34,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$10.32",
+    "hourEventualCost": "$20.92"
+  },
+  {
+    "id": 17,
+    "typeId": 42,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$31.46",
+    "hourEventualCost": "$2.65"
+  },
+  {
+    "id": 18,
+    "typeId": 36,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$0.25",
+    "hourEventualCost": "$39.48"
+  },
+  {
+    "id": 19,
+    "typeId": 42,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$29.19",
+    "hourEventualCost": "$44.09"
+  },
+  {
+    "id": 20,
+    "typeId": 63,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$44.08",
+    "hourEventualCost": "$33.27"
+  },
+  {
+    "id": 21,
+    "typeId": 76,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$32.62",
+    "hourEventualCost": "$12.92"
+  },
+  {
+    "id": 22,
+    "typeId": 33,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$3.20",
+    "hourEventualCost": "$22.82"
+  },
+  {
+    "id": 23,
+    "typeId": 34,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$47.79",
+    "hourEventualCost": "$38.97"
+  },
+  {
+    "id": 24,
+    "typeId": 99,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$38.18",
+    "hourEventualCost": "$34.96"
+  },
+  {
+    "id": 25,
+    "typeId": 78,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$32.20",
+    "hourEventualCost": "$32.56"
+  },
+  {
+    "id": 26,
+    "typeId": 49,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$4.92",
+    "hourEventualCost": "$8.53"
+  },
+  {
+    "id": 27,
+    "typeId": 62,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$34.15",
+    "hourEventualCost": "$4.68"
+  },
+  {
+    "id": 28,
+    "typeId": 1,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$19.16",
+    "hourEventualCost": "$22.59"
+  },
+  {
+    "id": 29,
+    "typeId": 33,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$18.01",
+    "hourEventualCost": "$42.65"
+  },
+  {
+    "id": 30,
+    "typeId": 14,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$24.73",
+    "hourEventualCost": "$24.58"
+  },
+  {
+    "id": 31,
+    "typeId": 43,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$33.16",
+    "hourEventualCost": "$34.88"
+  },
+  {
+    "id": 32,
+    "typeId": 94,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$18.12",
+    "hourEventualCost": "$35.48"
+  },
+  {
+    "id": 33,
+    "typeId": 74,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$16.21",
+    "hourEventualCost": "$36.26"
+  },
+  {
+    "id": 34,
+    "typeId": 67,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$14.06",
+    "hourEventualCost": "$47.35"
+  },
+  {
+    "id": 35,
+    "typeId": 74,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$35.46",
+    "hourEventualCost": "$46.26"
+  },
+  {
+    "id": 36,
+    "typeId": 52,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$22.65",
+    "hourEventualCost": "$40.82"
+  },
+  {
+    "id": 37,
+    "typeId": 37,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$3.27",
+    "hourEventualCost": "$7.23"
+  },
+  {
+    "id": 38,
+    "typeId": 78,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$21.49",
+    "hourEventualCost": "$24.84"
+  },
+  {
+    "id": 39,
+    "typeId": 29,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$28.92",
+    "hourEventualCost": "$46.74"
+  },
+  {
+    "id": 40,
+    "typeId": 87,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$1.80",
+    "hourEventualCost": "$6.84"
+  },
+  {
+    "id": 41,
+    "typeId": 73,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$43.85",
+    "hourEventualCost": "$10.65"
+  },
+  {
+    "id": 42,
+    "typeId": 65,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$9.24",
+    "hourEventualCost": "$8.53"
+  },
+  {
+    "id": 43,
+    "typeId": 88,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$3.79",
+    "hourEventualCost": "$27.28"
+  },
+  {
+    "id": 44,
+    "typeId": 21,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$2.30",
+    "hourEventualCost": "$36.80"
+  },
+  {
+    "id": 45,
+    "typeId": 64,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$8.02",
+    "hourEventualCost": "$34.07"
+  },
+  {
+    "id": 46,
+    "typeId": 88,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$37.73",
+    "hourEventualCost": "$16.34"
+  },
+  {
+    "id": 47,
+    "typeId": 89,
+    "maintaince_rate": "quarterly",
+    "hour_maintaince_cost": "$15.30",
+    "hourEventualCost": "$26.32"
+  },
+  {
+    "id": 48,
+    "typeId": 32,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$8.99",
+    "hourEventualCost": "$3.93"
+  },
+  {
+    "id": 49,
+    "typeId": 63,
+    "maintaince_rate": "monthly",
+    "hour_maintaince_cost": "$18.09",
+    "hourEventualCost": "$29.64"
+  },
+  {
+    "id": 50,
+    "typeId": 49,
+    "maintaince_rate": "yearly",
+    "hour_maintaince_cost": "$3.52",
+    "hourEventualCost": "$27.91"
+  }
+]
