@@ -8,10 +8,10 @@ const express = require("express");
 
 const router = express.Router();
 
-router.use('/types', boilerTypesRouter);
+router.use('/api/v1/types', boilerTypesRouter);
 router.use('/buildings', buildingsRouter);
 router.use('/company', companyRouter);
-router.use('/boilers', boilersRouter);
+router.use('/api/v1/boilers', boilersRouter);
 router.use('/technicians', technicianRouter);
 router.use('/api/v1/appointments', appointmentsRouter);
 
