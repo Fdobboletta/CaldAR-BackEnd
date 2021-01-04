@@ -146,7 +146,7 @@ exports.update = (req, res) => {
     .catch((err) => {
       console.error(err);
       return res.status(500).json({
-        error: "Error updating building with id=" + req.params.id,
+        error: "Error updating building with id=" +  req.params.id,
       });
     });
 };
