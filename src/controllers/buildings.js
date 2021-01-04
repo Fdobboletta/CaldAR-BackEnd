@@ -112,6 +112,7 @@ exports.update = (req, res) => {
   const validateBuildingName = !req.body.fullName;
   const validateAddressAndName = !req.body.address && !req.body.fullName;
   const validatePhone = String(req.body.phone).length;
+  const id = req.params.id;
 
   if (validateAddressAndName) {
     return res.status(400).json({
@@ -146,7 +147,7 @@ exports.update = (req, res) => {
     .catch((err) => {
       console.error(err);
       return res.status(500).json({
-        error: "Error updating building with id=" +  req.params.id,
+        error: "Error updating building with id=" + id,
       });
     });
 };
