@@ -13,7 +13,7 @@ router.use('/buildings', buildingsRouter);
 router.use('/company', companyRouter);
 router.use('/boilers', boilersRouter);
 router.use('/technicians', technicianRouter);
-router.use('/appointment', appointmentsRouter);
+router.use('/api/v1/appointment', appointmentsRouter);
 
 
 module.exports = router;
