@@ -15,7 +15,7 @@ router.use('/api/v1/types', boilerTypesRouter);
 router.use('/api/v1/buildings', buildingsRouter);
 router.use('/company', companyRouter);
 router.use('/api/v1/boilers', boilersRouter);
-router.use('/technicians', technicianRouter);
+router.use('/api/v1/technicians', technicianRouter);
 router.use('/api/v1/appointments', appointmentsRouter);
 
 router.use((req, res, next) => {
