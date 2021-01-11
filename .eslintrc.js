@@ -13,6 +13,6 @@ module.exports = {
   rules: {
     //no-console & unused-var = off, because console said that 'response is defined but never used'
     "no-console": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
   },
 };
