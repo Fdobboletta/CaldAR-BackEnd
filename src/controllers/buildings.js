@@ -86,7 +86,7 @@ exports.findById = (req, res) => {
 exports.delete = (req, res) => {
   const id = req.params.id;
   buildings
-    .findOneAndRemove(req.params.id, { useFindAndModify: false })
+    .findByIdAndUpdate(req.params.id, { useFindAndModify: false })
     .then((data) => {
       if (!data) {
         return res.status(404).json({
